@@ -1,0 +1,181 @@
+<!-- wp:paragraph -->
+<p><em>In 1921 Alfred Watkins saw old sites falling into straight lines across Herefordshire and called them leys. A century later I put {{headline.sites|int}} churches, barrows, stones, hillforts and holy wells on one map and asked how many lines chance alone would draw.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://tristan-hotham.github.io/ley-lines/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/{{meta.doi}}">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>Most of my work is about patterns that people see in data and whether they are really there: a surge on social media, a campaign that seems to be everywhere. Ley lines are the oldest version of that problem I know. Watkins, a Hereford businessman and antiquarian, was in the hills near Blackwardine on 30 June 1921 when, as he told it, a church, a mound, a camp and a stone lined up in front of him. He went home, ruled lines across his Ordnance Survey maps, and in <em>The Old Straight Track</em> (1925) argued that prehistoric Britons had walked straight sighted tracks between mark points.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Archaeologists never bought it. The idea came back in the 1960s as lines of earth energy, and John Michell gave us the Saint Michael's line, a chain of hilltop sites of the archangel from Cornwall towards Norfolk. In 1980 the statistician Simon Broadbent asked the question that matters: how many alignments would you expect if nobody had lined anything up? I wanted to ask it again with today's open data.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Fifty thousand dots</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I gathered every church and chapel in Wikidata (of every date, which is how ley hunters used them too), barrows and cairns, standing stones and other megaliths, stone circles, holy wells from OpenStreetMap and Wikidata, and hillforts from the Atlas of Hillforts. Merging duplicates left {{headline.sites|int}} sites in Great Britain.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_map.png|Map of Great Britain with about fifty thousand old sites coloured by type, four boxed sample landscapes in Cornwall, Herefordshire, Wiltshire and Cambridgeshire, and the Saint Michael's line running from Cornwall to Norfolk|Every old site in my data, the four landscapes I tested and the Saint Michael's line as I drew it. Churches are grey; barrows brown; hillforts red.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Then I picked four landscapes that made leys famous: Watkins's own Herefordshire; West Penwith at the tip of Cornwall, which Michell surveyed for leys; the Wiltshire chalk from Avebury to Stonehenge; and the country around Cambridge, subject of Watkins's last book. In each I counted every straight line of three, four, five and six places, where the two end places are 1 to 20 km apart and everything in between sits within 50 m of the line: a corridor 100 m wide.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Random points make leys too</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The key fact about alignments is how fast they multiply. A line of four needs one pair of points to set it up and two more that happen to fall in its thin corridor. So the expected number rises with roughly the fourth power of the number of points and the square of the corridor width. Double the points and you get about {{headline.curve_double_n|int}} times as many lines of four. Two hundred random points in a 40 km square give about {{headline.curve_n200_w100_e4|int}} of them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_density.png|Log-scale chart of expected lines of four random points rising steeply with point density, with separate lines for corridors of 50, 100, 200 and 400 metres and four dots for the real landscapes sitting above the 100 metre line|Expected lines of four random points by density and corridor width. The dots are the real landscapes.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>The interactive version has a little box where you can scatter random points yourself and watch the leys appear. It is oddly satisfying.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The real landscapes beat random points...</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Here is the result that a ley hunter would love. In every landscape, the real sites form more lines than points scattered evenly over the same land: between {{headline.unif_ratio_min|f1}} and {{headline.unif_ratio_max|f1}} times as many lines of four. In Herefordshire I count {{headline.hf_obs4|int}}, against {{headline.hf_unif4|int}} on average from 300 random scatters.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_real_vs_random.png|Four panels: in West Penwith and Herefordshire, ochre lines joining real sites beside teal lines joining the same number of random points; in Herefordshire the real lines radiate from a dense cluster at Hereford|Lines of four or more places in two landscapes (ochre) beside one random scatter of the same size (teal). In Herefordshire the real lines radiate from Hereford's churches.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">...and random points that crowd do just as well</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>But real sites are not scattered evenly. Churches gather in towns and villages, villages follow rivers and roads, and barrows crowd onto chalk ridges. Since lines multiply with density, crowding alone creates them. So I made a second kind of random version: take every real place and nudge it up to 1 km in a random direction. That keeps the crowding and breaks any exact line.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Against these nudged versions, the real counts sit between {{headline.jit_ratio_min|f2}} and {{headline.jit_ratio_max|f2}} times the average, inside the range chance gives in all four landscapes. Herefordshire's {{headline.hf_obs4|int}} lines compare with {{headline.hf_jit4|int}} on average. The same holds for prehistoric sites alone: West Penwith's {{headline.pen_pre_obs4|int}} lines of four prehistoric places look remarkable against {{headline.pen_pre_uniform4|f1}} from even scatter, and ordinary against {{headline.pen_pre_jitter4|f1}} from the nudged ones.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_regions.png|Dot and range chart of real lines of four divided by the random average for each landscape and set of sites; grey even-scatter dots sit well to the right of 1 while teal nudged dots sit on or near 1|Real lines of four divided by the random average. Grey: even scatter. Teal: real places nudged up to 1 km. Purple: places drawn at random from all real places.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>The landscapes are full of straight lines. Random points that crowd where the real sites crowd draw just as many.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:paragraph -->
+<p>The computer does find lovely leys. The longest in West Penwith runs {{examples.penwith.length_km|f1}} km from Ballowall Barrow near the west coast through Chûn Quoit, Mên Scryfa and four barrows to St Ia's church in St Ives: {{examples.penwith.n_places|int}} places in a line. The longest in Herefordshire is {{examples.herefordshire.n_places|int}} churches and chapels, four of them in Hereford itself. The line-finder does not care how old anything is.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Saint Michael's line</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I drew it as the straight line from St Michael's Mount through St Michael's church on Glastonbury Tor and carried on to the coast. It runs {{michael.length_km|int}} km and comes ashore {{michael.east_end.nearest_km|f1}} km from {{michael.east_end.nearest_place}} in Norfolk. Burrow Mump and Creech St Michael lie within about {{michael.named.2.off_m|int}} m of it, Brent Tor church {{michael.named.1.off_m|int}} m.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I compared it with 2,000 copies of itself, rotated by up to 20 degrees and shifted by up to 80 km. Within 1 km the real line passes {{headline.mich_all_1km|int}} sites; a moved copy of the same length would pass {{headline.mich_all_1km_exp|int}} on average. It does better than most copies on prehistoric sites (the {{headline.mich_pre_1km_pct|int}}th percentile), because it crosses barrow-rich Wessex, and on churches of St Michael ({{headline.mich_mich_1km|int}} against {{headline.mich_mich_1km_exp|f1}}, the {{headline.mich_mich_1km_pct|int}}th). Neither clears the usual 95% bar, and at a tight 100 m it is below average.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_michael.png|Four histograms of sites within 1 km of 2,000 moved copies of the Saint Michael's line, for all sites, prehistoric sites, churches and St Michael churches, with the real line marked in ochre|Sites within 1 km of the Saint Michael's line (ochre) against 2,000 moved copies (grey), per 100 km of line.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>A good line, then, chosen by someone who knew where the archangel's hilltop churches are. Not an exceptional one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What a ruler picks up</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Finally, the simplest test. I dropped 1,000 random 20 km lines on Britain. On average each passed within 50 m of {{headline.rl_gb_mean|f2}} of my sites, and {{headline.rl_gb_ge3|pct1}} passed three or more. On the Wiltshire chalk it was {{headline.rl_wilts_ge3|pct0}}. My list is strict, six kinds of site and a 50 m tolerance; Watkins also used moats, mounds, beacons and castles, and a pencil line on a one-inch map is about 63 m wide.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_random_lines.png|Stacked bars for Great Britain and four landscapes showing the share of random 20 km lines passing within 50 metres of 0, 1, 2 or 3 or more sites; Avebury and Stonehenge has by far the largest share with 3 or more|How many sites a random straight line passes within 50 m of.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>None of this says straight lines meant nothing in prehistory. Stone rows, cursuses and avenues are straight on purpose. But a ley is a long line on a map between sites thousands of years apart, and Britain has so many old sites that such lines are what you should expect. Watkins looked hard at his landscape and saw a real pattern. It was the pattern of a crowded landscape.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Sites within {{sites.merge_m|int}} m of each other were merged, and sites within {{params.place_m|int}} m grouped into places, so a barrow cemetery or a town centre counts once. All distances are on the British National Grid. Each test compares the real count with 300 random versions: even scatter over the same land, the real places nudged up to 1 km, and for prehistoric or church places, the same number drawn from all real places. For even scatter I also derived the expected count directly, and it matches the simulations. I chose the Saint Michael's line's course myself (the Mount to the Tor, extended), because writers describe it differently, and I read Piper's 1882 "camp" on Hatterall Hill as Pen Twyn hillfort. The churches are of all dates; coverage in open data is uneven, and some famous sites, including Arthur's Stone in Herefordshire, are missing (I placed that one from Wikipedia).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://tristan-hotham.github.io/ley-lines/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/{{meta.doi}}">Read the paper</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/ley-lines">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Churches: <a href="https://www.wikidata.org">Wikidata</a> (CC0). Barrows, megaliths, stone circles and holy wells: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL 1.0) and Wikidata, as cleaned in my earlier projects <a href="https://tristan-hotham.github.io/barrows-of-europe/">Barrows of Europe</a>, <a href="https://tristan-hotham.github.io/megalith-highway/">Megalith Highway</a>, <a href="https://tristan-hotham.github.io/stone-circles/">Same Shape, Different Millennia</a> and <a href="https://tristan-hotham.github.io/holy-wells/">Holy Wells</a>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Hillforts: Lock, G. and Ralston, I. 2017, <a href="https://hillforts.arch.ox.ac.uk">Atlas of Hillforts of Britain and Ireland</a> (CC BY-SA 4.0), via Mike Middleton's <a href="https://github.com/MikeDairsie/hillforts-primer">Hillforts Primer</a>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Named places: Ordnance Survey <a href="https://www.ordnancesurvey.co.uk/products/os-open-names">OS Open Names</a> (OGL v3, contains OS data © Crown copyright and database right 2026), Wikidata, and the Wikipedia article on <a href="https://en.wikipedia.org/wiki/Arthur%27s_Stone,_Herefordshire">Arthur's Stone, Herefordshire</a>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>History: English Wikipedia, <a href="https://en.wikipedia.org/wiki/Ley_line">Ley line</a>, <a href="https://en.wikipedia.org/wiki/The_Old_Straight_Track">The Old Straight Track</a> and <a href="https://en.wikipedia.org/wiki/Saint_Michael%27s_line">Saint Michael's line</a> (CC BY-SA 4.0).</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Broadbent, S. 1980, <a href="https://doi.org/10.2307/2981985">Simulating the Ley Hunter</a>, Journal of the Royal Statistical Society, Series A. Williamson, T. and Bellamy, L. 1983, Ley Lines in Question.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Paper, data and code: <a href="https://doi.org/{{meta.doi}}">Zenodo</a> and <a href="https://github.com/Tristan-Hotham/ley-lines">GitHub</a>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

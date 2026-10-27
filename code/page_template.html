@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ley Lines, Tested</title>
+<meta name="description" content="Are Britain's ancient sites lined up more than chance allows? {{headline.sites|int}} churches, barrows, standing stones, stone circles, hillforts and holy wells, four sample landscapes, and the Saint Michael's line, tested against random points.">
+<meta property="og:title" content="Ley lines, tested: are ancient sites in Britain lined up more than chance allows?">
+<meta property="og:description" content="Alfred Watkins saw straight lines of old sites across Herefordshire in 1921. I counted every alignment in four landscapes and compared them with random points. Chance, plus clustering, explains them.">
+<meta property="og:image" content="https://tristan-hotham.github.io/ley-lines/header.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Parchment, ochre and teal: ochre for the real lines, teal for chance. */
+:root{
+  --bg:#F4EEE1; --panel:#EAE2D0; --fg:#25221C; --muted:#6B6457; --rule:#D9CFBA; --card:#FBF7EE; --border:#C9BEA6;
+  --hot:#B7741C; --accent:#7A4A12; --teal:#1F6F78; --teal2:#7FB3B5;
+  --c0:#1F6F78; --c1:#6E4C8F; --c2:#9A6A2A; --c3:#B0452F; --c4:#2F6DA3; --c5:#8E877A;
+  --sea:#E4E6E1;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1A1813; --panel:#24211A; --fg:#EEE8DA; --muted:#A9A190; --rule:#3A352B; --card:#221F18; --border:#4D4638;
+  --hot:#E3A44B; --accent:#F0C987; --teal:#5FB7BF; --teal2:#2F6F73;
+  --c0:#5FB7BF; --c1:#B094D6; --c2:#D2A15E; --c3:#E07F67; --c4:#78AEE0; --c5:#A39C8E;
+  --sea:#14171A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1A1813; --panel:#24211A; --fg:#EEE8DA; --muted:#A9A190; --rule:#3A352B; --card:#221F18; --border:#4D4638;
+  --hot:#E3A44B; --accent:#F0C987; --teal:#5FB7BF; --teal2:#2F6F73;
+  --c0:#5FB7BF; --c1:#B094D6; --c2:#D2A15E; --c3:#E07F67; --c4:#78AEE0; --c5:#A39C8E;
+  --sea:#14171A; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1080px,calc(100vw - 32px));margin-left:calc((100% - min(1080px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.top{font:400 12px/1 var(--mono);color:var(--muted);margin-bottom:18px}
+.top a{text-decoration:none}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--accent);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(52px,13vw,108px)/.88 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance;font-variation-settings:"SOFT" 50}
+h1 em{font-style:normal;color:var(--hot)}
+.mark{width:clamp(96px,22vw,184px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:46ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(26px,5.6vw,38px)/1 var(--display);color:var(--fg)}
+.stats b.h{color:var(--hot)} .stats b.t{color:var(--teal)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:280px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.chip{display:inline-flex;align-items:center;gap:6px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block;border:2px solid var(--c);background:var(--c)}
+.chip[aria-pressed="false"]{opacity:.55}
+.chip[aria-pressed="false"] i{background:transparent}
+.chip[aria-pressed="true"]{background:var(--card);color:var(--fg);border-color:var(--c)}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+.slider{display:flex;align-items:center;gap:10px;flex:1 1 240px;font:400 12px/1.2 var(--mono);color:var(--muted)}
+.slider input[type=range]{flex:1;accent-color:var(--hot);min-width:100px}
+.slider output{font:500 13px/1 var(--mono);color:var(--fg);min-width:64px}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:820px){.mapgrid{grid-template-columns:1fr}}
+#map{height:clamp(440px,74vh,660px);border:1px solid var(--border);background:var(--sea);border-radius:2px;z-index:0}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px}
+.side{display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--hot);padding:12px 14px;font:400 13px/1.5 var(--mono)}
+.card.teal{border-left-color:var(--teal)}
+.card.empty{border-left-color:var(--border);color:var(--muted)}
+.card b{font:600 18px/1.2 var(--display);display:block;margin-bottom:6px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:6px 0 8px}
+.card dt{color:var(--muted)}.card dd{margin:0;overflow-wrap:anywhere}
+.count{font:400 13px/1.5 var(--mono);color:var(--muted)}
+.count b{color:var(--fg);font-weight:500}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--hot);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0;vertical-align:bottom}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right}
+.tablewrap{overflow-x:auto}
+.ley{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:760px){.ley{grid-template-columns:1fr}}
+.ley .box{background:var(--card);border:1px solid var(--border)}
+.ley canvas{display:block;width:100%;height:auto;aspect-ratio:1}
+.big{font:900 46px/1 var(--display);color:var(--hot)} .big.t{color:var(--teal)}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1001}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{margin:10px 12px;font:400 12.5px/1.45 var(--mono)}
+.leaflet-popup-content b{font:600 15px/1.2 var(--display);display:block;margin-bottom:4px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--fg)!important}
+.leaflet-popup-content a{color:var(--hot)}
+.leaflet-bar a{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-bar a:hover{background:var(--panel)}
+.leaflet-bar{border:1px solid var(--border)!important}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a href="https://blog.tristanhotham.com/">&larr; blog.tristanhotham.com</a></div>
+<div class="kicker"><b>Data study</b><span>Archaeology</span><span>Britain</span></div>
+<header class="hero">
+  <h1>Ley lines, <em>tested</em></h1>
+  <svg class="mark" viewBox="-100 -100 200 200" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">Are Britain's ancient sites lined up more than chance allows? I mapped {{headline.sites|int}} churches, barrows, standing stones, stone circles, hillforts and holy wells, counted every straight line through them in four landscapes, and asked how many lines random points would give.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Wikidata, OpenStreetMap contributors, Atlas of Hillforts</div>
+
+<div class="stats">
+  <div><b>{{headline.sites|int}}</b><span>old sites in Britain on one map, after merging duplicates</span></div>
+  <div><b class="h">{{headline.hf_obs4|int}}</b><span>straight lines of four sites in Watkins's Herefordshire (100 m wide, 1 to 20 km long)</span></div>
+  <div><b class="t">{{headline.hf_jit4|int}}</b><span>expected from random points with the same clustering as the real sites</span></div>
+  <div><b class="h">{{headline.curve_double_n|int}}x</b><span>more four-site lines when you double the number of sites. Lines come with density.</span></div>
+</div>
+
+<p class="lede">On 30 June 1921 Alfred Watkins, a Hereford businessman, photographer and antiquarian, was in the hills near Blackwardine in Herefordshire when, as he told it, he saw old sites falling into line across the landscape: a church, a mound, a camp on a hill, a standing stone. He went home, ruled straight lines across his Ordnance Survey maps, and found more. In <i>The Old Straight Track</i> (1925) he argued that these "leys" were the sighted trackways of prehistoric Britain, marked by mounds, beacons, moats and mark stones.</p>
+<p>Archaeologists were not persuaded, then or since. In the 1960s and 1970s the idea came back in a new form: leys as lines of earth energy, promoted by John Michell's <i>The View Over Atlantis</i> (1969), which also gave us the Saint Michael's line, a long alignment of hilltop sites dedicated to the archangel from Cornwall towards Norfolk. In 1980 the statistician Simon Broadbent asked the question that matters most in a paper called "Simulating the Ley Hunter": how many alignments would you expect if the sites were not lined up at all?</p>
+<p>This page asks the same question with today's open data. I put {{headline.sites|int}} old sites in Britain on one map, counted every straight line of three, four, five and more of them in four landscapes that ley hunters made famous, and compared each count with the same number of points scattered at random. I have tried to be fair to the idea. The answer is plain, though, and it is worth seeing why.</p>
+
+<h2><span class="n">01 · The map</span>Every old site, and the lines between them</h2>
+<p>Each dot is one site: a church or chapel (any date, from Wikidata), a barrow or cairn, a standing stone or other megalith, a stone circle, a hillfort, or a holy well. Pick a landscape to see the straight lines of four or more sites that my count finds there, drawn in ochre. Then switch to <b>Random points</b>: the same number of points scattered at random over the same land, with the lines that they make, in teal. You can also follow the Saint Michael's line and the line G. H. Piper described in 1882.</p>
+<div class="figure bleed">
+  <div class="controls"><div class="seg" id="views" role="group" aria-label="Choose a view"></div></div>
+  <div class="controls"><div class="seg" id="realsim" role="group" aria-label="Real or random"><button class="btn" data-v="real" aria-pressed="true">Real sites</button><button class="btn" data-v="sim" aria-pressed="false">Random points</button></div><div class="controls" id="chips" role="group" aria-label="Site types" style="margin:0"></div></div>
+  <div class="mapgrid">
+    <div>
+      <div id="map" role="application" aria-label="Map of {{headline.sites|int}} old sites in Great Britain with alignments in four landscapes"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="side">
+      <div class="card" id="vcard"></div>
+      <div class="card empty" id="card">Tap a dot to see what it is.</div>
+    </div>
+  </div>
+  <div class="src">Sites: Wikidata (CC0), OpenStreetMap contributors (ODbL 1.0) and the Atlas of Hillforts of Britain and Ireland (CC BY-SA 4.0), merged so that records within {{sites.merge_m|int}} m of each other count once. In each landscape only the 400 longest lines of the real sites and of the random points are drawn. Base map © Esri.</div>
+</div>
+
+<h2><span class="n">02 · Why lines appear anyway</span>Make your own leys</h2>
+<p>Before looking at real sites, it helps to see what random points do. Below is a square 40 km across, the size of each of my sample landscapes. Scatter some points in it at random and the box draws every straight line of four or more of them: lines between 1 and 20 km long, with every point within half the corridor width of the line between the two end points. Push the sliders.</p>
+<div class="figure bleed">
+  <div class="ley">
+    <div class="box"><canvas id="leycv" width="900" height="900" aria-label="Random points with the straight lines of four or more that they form"></canvas></div>
+    <div>
+      <div class="controls"><div class="slider"><span>Points</span><input type="range" id="leyn" min="20" max="400" step="10" value="200" aria-label="Number of points"><output id="leynout">200</output></div></div>
+      <div class="controls"><div class="slider"><span>Corridor</span><input type="range" id="leyw" min="20" max="400" step="10" value="100" aria-label="Corridor width in metres"><output id="leywout">100 m</output></div></div>
+      <div class="controls"><button class="btn" id="leyagain">New random scatter</button></div>
+      <p style="margin:12px 0 4px"><span class="big" id="leyc4">0</span> <span class="count">lines of four or more points, drawn</span></p>
+      <p class="count" id="leytxt"></p>
+    </div>
+  </div>
+  <div class="src">Points are uniform at random over the square. Counts: every set of four points whose two outer points are 1 to 20 km apart and whose other points lie inside the corridor between them. The expected count comes from the formula in the methods.</div>
+</div>
+<p>The number of lines grows much faster than the number of points. A set of four points needs one pair to define the line and two more that happen to fall inside its narrow corridor, so the expected count rises roughly with the fourth power of the number of points and the square of the corridor width. Double the points and you get about {{headline.curve_double_n|int}} times as many four-point lines; double the corridor width and you get {{headline.curve_double_w|int}} times as many. With 200 random points in my 40 km square and a 100 m corridor, the formula expects about {{headline.curve_n200_w100_e3|int}} lines of three, {{headline.curve_n200_w100_e4|int}} of four and {{headline.curve_n200_w100_e5|int}} of five. That is the heart of Broadbent's point and of Tom Williamson and Liz Bellamy's book <i>Ley Lines in Question</i> (1983): in a landscape as crowded with old sites as Britain's, lines are unavoidable.</p>
+<div class="figure">
+  <div class="fig-h">Expected lines of four points, by density and corridor width</div>
+  <div class="fig-sub">Uniform random points in a 40 km square; lines 1 to 20 km long. Log scale. Dots: the real number of places in each sample landscape (all site types) and the real count of four-place lines at 100 m.</div>
+  <div class="chart" id="curve"></div>
+</div>
+
+<h2><span class="n">03 · Real Britain against chance</span>More lines than random points, and no more than clustered ones</h2>
+<p>Now the real thing. I took four landscapes, each a 40 km square (West Penwith is smaller, because the sea is in the way): Watkins's own Herefordshire, around Hereford and Blackwardine; West Penwith, the tip of Cornwall that John Michell surveyed for leys in the 1970s; the chalk of Wiltshire from Avebury to Stonehenge; and the country around Cambridge, the subject of Watkins's last book. Barrow cemeteries and town churches would otherwise count many times over, so I first grouped sites into places: anything within {{params.place_m|int}} m of a place's first site joins it. Then I counted every line of three, four, five and six places, and did the same for random points, 300 times over for each test.</p>
+<p>I used two kinds of random points. The first scatters points evenly over the same land. The second keeps the real pattern but nudges every real place up to 1 km in a random direction, which keeps the clusters (the valleys, the villages, the barrow-strewn downs) and breaks up any exact lines. If ancient builders had set out sites on deliberate straight lines, the real count should beat both.</p>
+<div class="figure bleed">
+  <div class="fig-h">Lines of four places: real count against two kinds of chance</div>
+  <div class="fig-sub">Real count divided by the average of 300 random versions; bars show where 95% of the random versions fall. 1 means "exactly what chance gives". Corridor 100 m, lines 1 to 20 km. Log scale.</div>
+  <div class="chart" id="regchart"></div>
+</div>
+<p>In all four landscapes the real sites make more lines than evenly scattered points: between {{headline.unif_ratio_min|f1}} and {{headline.unif_ratio_max|f1}} times as many lines of four. In Herefordshire I count {{headline.hf_obs4|int}} lines of four places, against an average of {{headline.hf_unif4|int}} from even scatter (95% of runs between {{headline.hf_unif4_lo|int}} and {{headline.hf_unif4_hi|int}}). Taken alone, that would look like a discovery.</p>
+<p>It is not, because real sites are not scattered evenly. Churches sit in villages and towns, villages sit along rivers and roads, and barrows crowd onto chalk ridges. Crowding raises the local density, and the number of lines rises with density much faster than the density itself. Against random points that keep the real crowding, the real counts sit between {{headline.jit_ratio_min|f2}} and {{headline.jit_ratio_max|f2}} times the average, and in all {{headline.regions_inside_jitter|int}} landscapes inside the range that chance gives. Herefordshire's {{headline.hf_obs4|int}} compares with {{headline.hf_jit4|int}} on average from the nudged sites (95% of runs between {{headline.hf_jit4_lo|int}} and {{headline.hf_jit4_hi|int}}).</p>
+<p class="pull">The real landscapes are full of straight lines. Random points that crowd where the real sites crowd draw just as many.</p>
+<div class="figure">
+  <div class="tablewrap"><table class="t" id="regtable"></table></div>
+  <div class="src">Places: sites grouped within {{params.place_m|int}} m. "Prehistoric": places with a barrow, cairn, megalith, stone circle or hillfort. "Churches": places with a church or chapel and no prehistoric site. Shuffled: the same number of places drawn at random from all real places in the landscape.</div>
+</div>
+<h3>Prehistoric sites only</h3>
+<p>Ley hunters often argued that the real leys were prehistoric and that churches only came later, built on older sacred spots. So I also ran the test with prehistoric places alone. West Penwith gives the most interesting result: {{headline.pen_pre_obs4|int}} lines of four prehistoric places, against {{headline.pen_pre_uniform4|f1}} from even scatter and {{headline.pen_pre_shuffle4|f1}} when I draw the same number of places at random from all the real places in Penwith. But the nudged version of the prehistoric sites themselves gives {{headline.pen_pre_jitter4|f1}}, and the real count is beaten or matched in {{headline.pen_pre_jitter4_p|pct0}} of those runs. Penwith's barrows, quoits and stones cluster together, largely apart from the churches, so a random draw of places misses their crowding; keep the crowding and the excess goes. In Wiltshire the prehistoric count is enormous, because barrow groups are dense there, and it too sits within the clustered chance range.</p>
+<p>The lines that the computer finds are worth a look on the map. The longest real line in West Penwith runs for {{examples.penwith.length_km|f1}} km from Ballowall Barrow on the coast west of St Just, through Chûn Quoit, Mên Scryfa and four barrows, to St Ia's church in St Ives: {{examples.penwith.n_places|int}} places, just the sort of line a ley hunter would be proud of. The longest line in Herefordshire is made of {{examples.herefordshire.n_churches|int}} churches and chapels, most of them in Hereford itself, among them a United Reformed church and an almshouse chapel. A line-finder does not care how old a site is, and nor did some of the leys.</p>
+
+<h2><span class="n">04 · Any straight line</span>What a ruler picks up</h2>
+<p>Williamson and Bellamy's sharpest point was that Britain is so full of old sites that almost any line will clip a few. With my data and a strict tolerance, the effect depends a great deal on where you draw. I dropped 1,000 straight 20 km lines at random over the land of Great Britain and of each landscape and counted sites within 50 m of each line.</p>
+<div class="figure">
+  <div class="fig-h">How many sites does a random 20 km line pass within 50 m of?</div>
+  <div class="fig-sub">Share of 1,000 random lines (15 km in West Penwith) passing within 50 m of 0, 1, 2, 3 or more sites.</div>
+  <div class="chart" id="rlchart"></div>
+</div>
+<p>Across Britain a random 20 km line passes within 50 m of {{headline.rl_gb_mean|f2}} sites on average, and {{headline.rl_gb_ge3|pct1}} of lines pass three or more. On the Wiltshire chalk, {{headline.rl_wilts_ge3|pct0}} do. My data hold only six kinds of site, and only those that Wikidata, OpenStreetMap and the Atlas record. Watkins also counted mounds, moats, beacons, mark stones and castles, and a pencil line 1 mm wide on a map at one inch to the mile already covers about 63 m of ground. With every extra kind of mark point and every extra metre of tolerance, the count of chance lines climbs, as the curve above shows.</p>
+
+<h2><span class="n">05 · The Saint Michael's line</span>A {{michael.length_km|int}} km test</h2>
+<p>The English Saint Michael's line, first described by John Michell in 1969, runs east-north-east from St Michael's Mount in Cornwall through hilltop sites linked to the archangel, among them St Michael de Rupe on Brent Tor, Creech St Michael, Burrow Mump and St Michael's church on Glastonbury Tor, to the Norfolk coast. I drew it as the straight line from St Michael's Mount through the church on Glastonbury Tor and carried it on until it leaves Britain. It runs {{michael.length_km|f1}} km on a bearing of {{michael.bearing_deg|f1}} degrees and meets the east coast {{michael.east_end.nearest_km|f1}} km from {{michael.east_end.nearest_place|raw}} in Norfolk.</p>
+<p>The named sites in between do lie close to it: Burrow Mump church {{michael.named.3.off_m|int}} m away, Creech St Michael {{michael.named.2.off_m|int}} m, and Brent Tor church {{michael.named.1.off_m|int}} m. Then I counted every site within 1 km of the line, leaving out anything within 1 km of the two points that define it, and compared the count with 2,000 copies of the same line rotated by up to 20 degrees and shifted sideways by up to 80 km.</p>
+<div class="figure bleed">
+  <div class="fig-h">Sites within 1 km of the Saint Michael's line, against 2,000 moved copies</div>
+  <div class="fig-sub">Sites per 100 km of line over land. Grey: the moved lines. Ochre: the real line (anchor sites left out). Percentile = share of moved lines with a lower rate.</div>
+  <div class="chart" id="michchart"></div>
+</div>
+<p>Within 1 km, the real line passes {{headline.mich_all_1km|int}} sites; a moved line of the same length would pass {{headline.mich_all_1km_exp|int}} on average, which puts the real line at the {{headline.mich_all_1km_pct|int}}th percentile. It does better on prehistoric sites ({{headline.mich_pre_1km|int}} against {{headline.mich_pre_1km_exp|int}}, the {{headline.mich_pre_1km_pct|int}}th percentile), mainly because it crosses the barrow country of Wessex, and on churches dedicated to St Michael ({{headline.mich_mich_1km|int}} against {{headline.mich_mich_1km_exp|f1}}, the {{headline.mich_mich_1km_pct|int}}th percentile). Neither passes the usual 95% bar, and I ran several comparisons, so one or two near misses are to be expected. At a tighter 100 m, the line passes {{headline.mich_all_100m|int}} sites against {{headline.mich_all_100m_exp|int}} expected: fewer than an average moved line.</p>
+<p>So the Saint Michael's line is a good line, chosen by someone who knew where the archangel's hilltop churches are, and it runs through a part of England unusually rich in barrows. It is not an exceptional one.</p>
+
+<h2><span class="n">06 · Piper's line</span>Skirrid to Arthur's Stone, 1882</h2>
+<p>Watkins cited an earlier observation by G. H. Piper, read to the Woolhope Naturalists' Field Club in 1882: a line from the Skirrid mountain north to Arthur's Stone "would pass over the camp and southernmost point of Hatterall Hill, Oldcastle, Longtown Castle, and Urishay and Snodhill castles." I drew it from the Ordnance Survey's point for Ysgyryd Fawr to Arthur's Stone near Dorstone, {{piper.length_km|f1}} km. The places Piper named lie between {{piper.min_off_m|int}} m and {{piper.max_off_m|int}} m from the line.</p>
+<div class="figure">
+  <div class="fig-h">How far Piper's places lie from his straight line</div>
+  <div class="fig-sub">Distance from the line from Ysgyryd Fawr to Arthur's Stone, in metres, by distance along it. Points for hills and hamlets are Ordnance Survey name points, not summits.</div>
+  <div class="chart" id="piperchart"></div>
+</div>
+<p>Castles, a hamlet and a hill within a few hundred metres to two kilometres of a {{piper.length_km|int}} km line is not a strong test of anything: the line was drawn after looking at the map, and the tolerance is generous. In my own data only {{piper.sites_within_50m|int}} site lies within 50 m of the line (the church at Clodock); the same line dropped at random over the surrounding land passes {{piper.null_mean|f1}} sites on average.</p>
+
+<h2><span class="n">07 · What this does and does not show</span>Lines without leys</h2>
+<p>I find no sign, in any of my four landscapes or on the Saint Michael's line, that old sites in Britain are lined up more than chance allows once you allow for where they cluster. That matches what Broadbent, Williamson and Bellamy and others concluded decades ago, now with tens of thousands of sites and open data that anyone can check.</p>
+<p>That is not the same as saying straight lines meant nothing to the people who built these sites. Some prehistoric monuments are straight on purpose: stone rows, the long ditches called cursuses, avenues to henges, and barrows set along ridges in rows. Roman roads are famously straight. Those are lines of a few hundred metres to a few kilometres, visible on the ground and dated. Leys are different: long lines drawn on a map between sites of very different ages, from prehistoric barrows to recent chapels, and a map with enough dots on it will always give you some.</p>
+<p>Watkins comes out of this rather well as a person. He looked hard at his own landscape, photographed it, and wrote down what he saw so that others could check. The checking just took a computer.</p>
+
+<div class="note">
+<h3>Methods and caveats</h3>
+<p><b>Sites.</b> Churches and chapels: every Wikidata item in the United Kingdom that is a church building, with coordinates ({{sites.church_sites|int}} in Great Britain after merging). These are of all dates, from Saxon to modern, because Wikidata does not give a reliable founding date for most of them; Watkins and later ley hunters also used churches of any date on the assumption that they stood on older sites. Barrows and cairns, megaliths and standing stones, and stone circles come from OpenStreetMap and Wikidata, cleaned for my earlier projects Barrows of Europe, Megalith Highway and Same Shape, Different Millennia. Hillforts come from the Atlas of Hillforts of Britain and Ireland. Holy wells are those marked as holy in OpenStreetMap and Wikidata, from my Holy Wells project. Records within {{sites.merge_m|int}} m of each other, or sharing a Wikidata item, are merged into one site: {{sites.gb_total|int}} records became {{sites.merged_sites|int}} sites. Coverage is uneven: Wikidata holds many scheduled monuments, so barrows are thickest where they were listed in detail, as in Wessex, and some famous sites are missing, including Arthur's Stone in Herefordshire, which I placed from its Wikipedia article. Not every Wikidata church is placed precisely: {{headline.church_dec_3|int}} have coordinates given to three decimal places (about 100 m) and {{headline.church_dec_le2|int}} to two or fewer.</p>
+<p><b>Places.</b> To stop barrow cemeteries and town-centre churches counting many times over, sites are grouped into places in a fixed order (prehistoric first, then wells, then churches): each site joins the first place whose first site is within {{params.place_m|int}} m, or starts a new place. Britain has {{places.n|int}} places.</p>
+<p><b>Alignments.</b> A line of k places is a set of k places whose two outer places are between 1 and 20 km apart and whose other places all lie within 50 m (a 100 m corridor) of the straight segment between them, measured on the British National Grid. Each pair of end places with m places inside its corridor contributes C(m, k minus 2) lines of k. I count lines of 3, 4, 5 and 6, and also show corridors of 50, 200 and 400 m. Maps show only the longest maximal lines (lines not contained in a longer one).</p>
+<p><b>Chance.</b> For each landscape and set of places I made 300 random versions with the same number of points: even scatter over the land in the same box (Natural Earth 10 m coastline), the real places each moved up to 1 km in a random direction (staying on land), and, for prehistoric or church places, the same number drawn at random from all real places in the landscape. For uniform points the expected number of lines of k has a simple form: the number of pairs, times C(N minus 2, k minus 2), times the average of (w d / A) to the power k minus 2 over pairs between 1 and 20 km apart, where w is the corridor width, d the pair distance and A the area. My simulations match it closely (for 400 points, {{curve.check.2.sim_mean_4|int}} lines of four simulated against {{curve.check.2.formula_4|int}} from the formula).</p>
+<p><b>Named lines.</b> The Saint Michael's line runs from St Michael's Mount through St Michael's church on Glastonbury Tor (Wikidata coordinates) to the east coast. That is my choice of definition: the line is described in different ways by different writers. Counts leave out sites within 1 km of these two anchors. Moved copies are rotated about the line's midpoint by up to 20 degrees and shifted by up to 80 km, and kept only if at least half their length is over land; rates are per 100 km over land. Piper's line runs from the Ordnance Survey Open Names point for Ysgyryd Fawr (a name position, not the summit) to Arthur's Stone. I take his "camp" on Hatterall Hill to be Pen Twyn hillfort at the hill's southern end; that is my reading. The sources of every named point are in <code>data/named_points.csv</code>.</p>
+<p><b>Limits.</b> This is a test of six kinds of site in open data, not of every mark point a ley hunter might use. A different corridor, length range or set of landscapes would give different counts, though the comparison with chance is what matters and it holds at every width I tried for even scatter. The nudged-points test is deliberately strict: it keeps clustering at scales above 1 km, so it cannot tell clustering from lines that run along a ridge or valley. A line of sites along a ridge is a real pattern, but it is a pattern of the ground, not evidence of a planned ley.</p>
+</div>
+
+<h2><span class="n">08 · Sources</span>Data and reading</h2>
+<ul>
+<li>Churches: <a href="https://www.wikidata.org">Wikidata</a>, CC0, items in the UK that are church buildings, with coordinates. Pulled {{meta.pulled|raw}}.</li>
+<li>Barrows, megaliths, stone circles, holy wells: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, ODbL 1.0, and Wikidata, CC0, as cleaned in <a href="https://tristan-hotham.github.io/barrows-of-europe/">Barrows of Europe</a>, <a href="https://tristan-hotham.github.io/megalith-highway/">Megalith Highway</a>, <a href="https://tristan-hotham.github.io/stone-circles/">Same Shape, Different Millennia</a> and <a href="https://tristan-hotham.github.io/holy-wells/">Holy Wells</a>.</li>
+<li>Hillforts: Lock, G. and Ralston, I. 2017, <a href="https://hillforts.arch.ox.ac.uk">Atlas of Hillforts of Britain and Ireland</a>, CC BY-SA 4.0, via Mike Middleton's <a href="https://github.com/MikeDairsie/hillforts-primer">Hillforts Primer</a>.</li>
+<li>Named places: Ordnance Survey <a href="https://www.ordnancesurvey.co.uk/products/os-open-names">OS Open Names</a>, OGL v3, contains OS data © Crown copyright and database right 2026; Wikidata; English Wikipedia articles <a href="https://en.wikipedia.org/wiki/Arthur%27s_Stone,_Herefordshire">Arthur's Stone, Herefordshire</a> and <a href="https://en.wikipedia.org/wiki/Blackwardine">Blackwardine</a>.</li>
+<li>History of the idea: English Wikipedia, <a href="https://en.wikipedia.org/wiki/Ley_line">Ley line</a>, <a href="https://en.wikipedia.org/wiki/The_Old_Straight_Track">The Old Straight Track</a> and <a href="https://en.wikipedia.org/wiki/Saint_Michael%27s_line">Saint Michael's line</a>, CC BY-SA 4.0, retrieved {{meta.pulled|raw}}.</li>
+<li>Watkins, A. 1925, <i>The Old Straight Track</i>.</li>
+<li>Broadbent, S. 1980, "Simulating the Ley Hunter", <i>Journal of the Royal Statistical Society, Series A</i> 143(2), 109 to 140. <a href="https://doi.org/10.2307/2981985">doi:10.2307/2981985</a></li>
+<li>Williamson, T. and Bellamy, L. 1983, <i>Ley Lines in Question</i>. Tadworth: World's Work.</li>
+<li>Coastline: Natural Earth, public domain. Base map tiles © Esri. Map library: Leaflet.</li>
+</ul>
+<div class="cta"><a class="p" href="https://doi.org/{{meta.doi|raw}}">Read the paper</a><a href="https://github.com/Tristan-Hotham/ley-lines">Data and code</a><a href="https://blog.tristanhotham.com/">More data studies</a></div>
+<p>Related: <a href="https://tristan-hotham.github.io/within-sight/">Within Sight</a> (could hillforts see each other?), <a href="https://tristan-hotham.github.io/how-roman-is-your-road/">How Roman is your road?</a> (straight lines that really were planned), <a href="https://tristan-hotham.github.io/holy-wells/">Holy Wells</a>.</p>
+
+<footer>
+  <p>Dr Tristan Hotham, researcher on social media, campaigns and politics. Independent researcher. <a href="https://blog.tristanhotham.com/">blog.tristanhotham.com</a></p>
+  <p>Cite as: Hotham, T. (2026) Ley Lines, Tested: are ancient sites in Britain lined up more than chance allows? Zenodo. <a href="https://doi.org/{{meta.doi|raw}}">https://doi.org/{{meta.doi|raw}}</a></p>
+  <p>Sites © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, ODbL 1.0; Wikidata, CC0; Atlas of Hillforts of Britain and Ireland, CC BY-SA 4.0. Contains OS data © Crown copyright and database right 2026 (OGL v3). Coastline: Natural Earth. Base map tiles © Esri. Map library: Leaflet.</p>
+  <p>The derived site data are released under the ODbL 1.0 because they include OpenStreetMap data; hillfort rows also carry the Atlas's CC BY-SA 4.0 terms. Text and figures are CC BY-SA 4.0. Code is MIT.</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/*DATA*/
+const NS = "http://www.w3.org/2000/svg";
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => Math.round(n).toLocaleString("en-GB");
+const pc = (x, d = 0) => (x * 100).toFixed(d) + "%";
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("focus", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("blur", hideTip); node.addEventListener("click", e => { e.stopPropagation(); s(); }); }
+document.addEventListener("click", hideTip);
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); redraws.push(() => go(true)); go(); return () => go(true); }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const R = D.R;
+const TYPES = ["Stone circle", "Megalith or standing stone", "Barrow or cairn", "Hillfort", "Holy well", "Church or chapel"];
+const TC = i => `var(--c${i})`;
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+document.getElementById("theme").onclick = () => { const r = document.documentElement; r.dataset.theme = isDark() ? "light" : "dark"; redraws.forEach(f => f()); window.__restyle && window.__restyle(); };
+
+/* hero mark: scattered dots, one straight ochre line through four of them */
+(() => { const g = document.getElementById("heroMark"); let s = 7; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  for (let i = 0; i < 46; i++) { const x = -88 + rnd() * 176, y = -88 + rnd() * 176; el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: 3.2, fill: "var(--muted)", opacity: .55 }, g); }
+  el("line", { x1: -92, y1: 70, x2: 92, y2: -64, stroke: "var(--hot)", "stroke-width": 4, "stroke-linecap": "round" }, g);
+  [-70, -18, 30, 74].forEach(x => { const y = 70 + (x + 92) * (-134 / 184); el("circle", { cx: x, cy: y.toFixed(1), r: 7, fill: "var(--fg)" }, g); });
+})();
+
+/* ===== map ===== */
+(() => {
+  const vcard = document.getElementById("vcard"), card = document.getElementById("card"), legend = document.getElementById("legend");
+  if (!window.L) { document.getElementById("map").innerHTML = '<p style="padding:16px;font:400 13px/1.5 var(--mono)">The map library did not load. The charts below still work.</p>'; return; }
+  const N = D.lat.length; const on = TYPES.map(() => true);
+  const map = L.map("map", { scrollWheelZoom: false, zoomSnap: .25, minZoom: 5, maxZoom: 16 }).fitBounds([[49.9, -6.4], [58.7, 1.8]]);
+  map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+  map.on("focus", () => map.scrollWheelZoom.enable()); map.on("blur", () => map.scrollWheelZoom.disable());
+  const tileUrl = () => `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${isDark() ? "World_Dark_Gray_Base" : "World_Light_Gray_Base"}/MapServer/tile/{z}/{y}/{x}`;
+  const tiles = L.tileLayer(tileUrl(), { maxZoom: 16, attribution: 'Tiles &copy; Esri · Sites &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL), Wikidata (CC0), Atlas of Hillforts (CC BY-SA)' }).addTo(map);
+  const C = {}; const col = v => C[v] || (C[v] = css(v));
+  /* all sites: one canvas, redrawn after each move */
+  let dim = false;
+  const Pts = L.Layer.extend({
+    onAdd(m) { this._c = L.DomUtil.create("canvas"); this._c.style.position = "absolute"; this._c.style.pointerEvents = "none"; m.getPanes().overlayPane.appendChild(this._c); m.on("moveend zoomend resize", this.draw, this); m.on("zoomstart", () => this._c.style.display = "none"); this.draw(); },
+    onRemove(m) { this._c.remove(); m.off("moveend zoomend resize", this.draw, this); },
+    draw() { const m = map, s = m.getSize(), c = this._c, dpr = window.devicePixelRatio || 1; c.style.display = "block";
+      L.DomUtil.setPosition(c, m.containerPointToLayerPoint([0, 0])); c.width = s.x * dpr; c.height = s.y * dpr; c.style.width = s.x + "px"; c.style.height = s.y + "px";
+      const g = c.getContext("2d"); g.scale(dpr, dpr); const b = m.getBounds().pad(.02); const z = m.getZoom(); const r = z < 7 ? 1.05 : z < 8.5 ? 1.6 : z < 10.5 ? 2.4 : 3.4;
+      g.globalAlpha = dim ? .35 : .85; const s0 = b.getSouth() * 1e4, n0 = b.getNorth() * 1e4, w0 = b.getWest() * 1e4, e0 = b.getEast() * 1e4;
+      for (const t of [5, 4, 3, 2, 1, 0]) { if (!on[t]) continue; g.fillStyle = col(`--c${t}`); const tc = String(t);
+        for (let i = 0; i < N; i++) { if (D.cat[i] !== tc) continue; const la = D.lat[i], lo = D.lon[i]; if (la < s0 || la > n0 || lo < w0 || lo > e0) continue;
+          const p = m.latLngToContainerPoint([la / 1e4, lo / 1e4]); g.beginPath(); g.arc(p.x, p.y, t === 5 ? r * .85 : r, 0, 6.2832); g.fill(); } } }
+  });
+  const pts = new Pts().addTo(map);
+  map.on("click", e => { const p0 = e.containerPoint; let best = -1, bd = 81;
+    for (let i = 0; i < N; i++) { if (!on[+D.cat[i]]) continue; const la = D.lat[i] / 1e4, lo = D.lon[i] / 1e4; if (Math.abs(la - e.latlng.lat) > .3 || Math.abs(lo - e.latlng.lng) > .5) continue;
+      const p = map.latLngToContainerPoint([la, lo]); const d = (p.x - p0.x) ** 2 + (p.y - p0.y) ** 2; if (d < bd) { bd = d; best = i; } }
+    if (best < 0) return; const la = D.lat[best] / 1e4, lo = D.lon[best] / 1e4, t = +D.cat[best];
+    card.className = "card"; card.innerHTML = `<b>${TYPES[t]}</b><dl><dt>Where</dt><dd>${la.toFixed(4)}, ${lo.toFixed(4)}</dd></dl><a href="https://www.openstreetmap.org/?mlat=${la}&mlon=${lo}#map=16/${la}/${lo}" target="_blank" rel="noopener">Open on OpenStreetMap</a>`; });
+  /* chips */
+  const chips = document.getElementById("chips");
+  TYPES.forEach((n, t) => { const b = document.createElement("button"); b.className = "btn chip"; b.style.setProperty("--c", TC(t)); b.setAttribute("aria-pressed", "true"); b.innerHTML = `<i></i>${n}`;
+    b.onclick = () => { on[t] = !on[t]; b.setAttribute("aria-pressed", on[t]); pts.draw(); }; chips.appendChild(b); });
+  /* overlays */
+  const over = L.layerGroup().addTo(map);
+  const pin = () => L.divIcon({ className: "", html: '<div style="width:14px;height:14px;transform:rotate(45deg);background:var(--fg);border:2px solid var(--bg);box-shadow:0 0 0 1.5px var(--hot)"></div>', iconSize: [14, 14], iconAnchor: [7, 7] });
+  const VIEWS = [["gb", "All Britain"], ["herefordshire", "Herefordshire"], ["penwith", "West Penwith"], ["wiltshire", "Avebury and Stonehenge"], ["cambridge", "Around Cambridge"], ["michael", "Saint Michael's line"], ["piper", "Piper's line"]];
+  let view = "gb", mode = "real";
+  const vb = document.getElementById("views");
+  VIEWS.forEach(([k, n]) => { const b = document.createElement("button"); b.className = "btn"; b.dataset.v = k; b.textContent = n; b.setAttribute("aria-pressed", k === view); b.onclick = () => { view = k; [...vb.children].forEach(x => x.setAttribute("aria-pressed", x.dataset.v === k)); show(true); }; vb.appendChild(b); });
+  const rs = document.getElementById("realsim");
+  [...rs.children].forEach(b => b.onclick = () => { mode = b.dataset.v; [...rs.children].forEach(x => x.setAttribute("aria-pressed", x.dataset.v === mode)); show(false); });
+  const RLAB = { herefordshire: "Herefordshire", penwith: "West Penwith", wiltshire: "Avebury and Stonehenge", cambridge: "Around Cambridge" };
+  function regionCard(k) { const g = R.regions[k], s = g.sets.all, u = s.nulls.uniform["4"], j = s.nulls.jitter["4"];
+    return `<b>${esc(g.long)}</b><dl><dt>Places</dt><dd>${fmt(s.n)} on ${fmt(g.land_km2)} km² of land</dd><dt>Lines of 4</dt><dd><span style="color:var(--hot)">${fmt(s.obs["4"])} real</span></dd><dt>Even scatter</dt><dd>${fmt(u.mean)} (95%: ${fmt(u.lo)} to ${fmt(u.hi)})</dd><dt>Nudged sites</dt><dd>${fmt(j.mean)} (95%: ${fmt(j.lo)} to ${fmt(j.hi)})</dd><dt>Longest</dt><dd>${s.longest} places in a line (random scatter: ${s.nulls.uniform.longest_mean.toFixed(1)} on average)</dd></dl>${mode === "real" ? `Showing ${fmt(Math.min(400, g.maximal_4plus))} of ${fmt(g.maximal_4plus)} maximal real lines of four or more.` : `Showing one random scatter of ${fmt(s.n)} points and ${fmt(Math.min(400, g.sim_maximal_4plus))} of its ${fmt(g.sim_maximal_4plus)} lines of four or more.`}`; }
+  function show(fit) {
+    over.clearLayers(); dim = false; rs.style.display = (view in RLAB) ? "" : "none"; legend.innerHTML = "";
+    const hot = col("--hot"), teal = col("--teal");
+    if (view === "gb") { if (fit) map.fitBounds([[49.9, -6.4], [58.7, 1.8]]);
+      Object.entries(D.reg).forEach(([k, g]) => { const r = L.rectangle(g.box, { color: hot, weight: 1.5, fill: false, dashArray: "4 4" }).addTo(over); r.on("click", () => vb.querySelector(`[data-v=${k}]`).click()); });
+      L.polyline(D.geo.michael, { color: hot, weight: 2, opacity: .8 }).addTo(over);
+      vcard.className = "card"; vcard.innerHTML = `<b>Great Britain</b><dl><dt>Sites</dt><dd>${fmt(R.sites.merged_sites)}</dd><dt>Churches</dt><dd>${fmt(R.sites.church_sites)} (all dates)</dd><dt>Barrows</dt><dd>${fmt(R.sites.any_cat.barrow)}</dd><dt>Hillforts</dt><dd>${fmt(R.sites.any_cat.hillfort)}</dd><dt>Megaliths</dt><dd>${fmt(R.sites.any_cat.megalith)}</dd><dt>Stone circles</dt><dd>${fmt(R.sites.any_cat.stone_circle)}</dd><dt>Holy wells</dt><dd>${fmt(R.sites.any_cat.holy_well)}</dd></dl>Dashed boxes: the four sample landscapes. Tap one, or pick a view above.`;
+      legend.innerHTML = TYPES.map((n, t) => `<span><i style="background:${TC(t)};height:8px;width:8px;border-radius:50%"></i>${n}</span>`).join("");
+    } else if (view in RLAB) { const g = D.reg[view]; if (fit) map.fitBounds(g.box, { padding: [10, 10] });
+      L.rectangle(g.box, { color: col("--muted"), weight: 1, fill: false, dashArray: "4 4" }).addTo(over);
+      if (mode === "real") { dim = true;
+        g.lines.forEach(([a, b, n]) => L.polyline([[g.p[a][0], g.p[a][1]], [g.p[b][0], g.p[b][1]]], { color: hot, weight: n >= 6 ? 2.6 : n === 5 ? 1.8 : 1.1, opacity: n >= 5 ? .9 : .5 }).addTo(over).bindPopup(`<b>${n} places in a line</b>${esc(g.p[a][3] || TYPES[g.p[a][2]])} to ${esc(g.p[b][3] || TYPES[g.p[b][2]])}`));
+        g.p.forEach(p => L.circleMarker([p[0], p[1]], { radius: 3.4, color: col(`--c${p[2]}`), weight: 1, fillOpacity: .9 }).addTo(over).bindPopup(`<b>${esc(p[3] || TYPES[p[2]])}</b>${TYPES[p[2]]}${p[4] > 1 ? ` · ${p[4]} sites grouped as one place` : ""}`));
+        legend.innerHTML = `<span><i style="background:${hot}"></i>Line of 4 or more real places (thicker = more)</span>`;
+      } else { dim = true; pts.draw();
+        g.simlines.forEach(([a, b, n]) => L.polyline([g.sim[a], g.sim[b]], { color: teal, weight: n >= 6 ? 2.6 : n === 5 ? 1.8 : 1.1, opacity: n >= 5 ? .9 : .5 }).addTo(over));
+        g.sim.forEach(p => L.circleMarker(p, { radius: 3, color: teal, weight: 1, fillOpacity: .8 }).addTo(over));
+        legend.innerHTML = `<span><i style="background:${teal}"></i>Line of 4 or more random points</span>`; }
+      vcard.className = mode === "real" ? "card" : "card teal"; vcard.innerHTML = regionCard(view);
+    } else if (view === "michael") { if (fit) map.fitBounds(D.geo.michael, { padding: [20, 20] }); dim = true;
+      const [a, b] = D.geo.michael; const k = Math.cos((a[0] + b[0]) / 2 * Math.PI / 180); const dx = (b[1] - a[1]) * k, dy = b[0] - a[0], L0 = Math.hypot(dx, dy);
+      const off = 1 / 111.2; const nx = -dy / L0 * off, ny = dx / L0 * off; // 1 km sideways in degrees
+      L.polygon([[a[0] + ny, a[1] + nx / k], [b[0] + ny, b[1] + nx / k], [b[0] - ny, b[1] - nx / k], [a[0] - ny, a[1] - nx / k]], { color: hot, weight: 0, fillColor: hot, fillOpacity: .14 }).addTo(over);
+      L.polyline(D.geo.michael, { color: hot, weight: 2 }).addTo(over);
+      D.lp.filter(p => p[6] === "michael").forEach(p => L.circleMarker([p[0], p[1]], { radius: p[7] ? 6 : 3.4, color: p[7] ? col("--fg") : col(`--c${p[2]}`), fillColor: col(`--c${p[2]}`), weight: p[7] ? 2 : 1, fillOpacity: .9 }).addTo(over).bindPopup(`<b>${esc(p[3] || TYPES[p[2]])}</b>${TYPES[p[2]]}<br>${fmt(p[4])} m from the line, ${p[5].toFixed(1)} km from St Michael's Mount${p[7] ? "<br>Dedicated to St Michael" : ""}`));
+      D.named.filter(n => n[0] === "michael").forEach(n => L.marker([n[2], n[3]], { title: n[1], icon: pin() }).addTo(over).bindPopup(`<b>${esc(n[1])}</b>Located from: ${esc(n[4])}`));
+      const m = R.michael, c = m.comp;
+      vcard.className = "card"; vcard.innerHTML = `<b>Saint Michael's line</b><dl><dt>Length</dt><dd>${m.length_km.toFixed(1)} km, bearing ${m.bearing_deg.toFixed(1)}°</dd><dt>Within 1 km</dt><dd>${fmt(c["1km_all"].real)} sites (moved lines: ${fmt(c["1km_all"].expected_on_real_length)})</dd><dt>Prehistoric</dt><dd>${fmt(c["1km_prehistoric"].real)} (${fmt(c["1km_prehistoric"].expected_on_real_length)})</dd><dt>St Michael churches</dt><dd>${fmt(c["1km_michael"].real)} (${c["1km_michael"].expected_on_real_length.toFixed(1)})</dd><dt>Within 100 m</dt><dd>${fmt(c["100m_all"].real)} sites (${fmt(c["100m_all"].expected_on_real_length)})</dd></dl>Shaded band: 1 km either side. Ringed dots: churches dedicated to St Michael. Diamonds: the named sites.`;
+      legend.innerHTML = `<span><i style="background:${hot}"></i>Line from St Michael's Mount through Glastonbury Tor</span>`;
+    } else if (view === "piper") { if (fit) map.fitBounds(D.geo.piper, { padding: [40, 40] });
+      L.polyline(D.geo.piper, { color: hot, weight: 2.4 }).addTo(over);
+      D.named.filter(n => n[0] === "piper").forEach(n => L.marker([n[2], n[3]], { title: n[1], icon: pin() }).addTo(over).bindPopup(`<b>${esc(n[1])}</b>Located from: ${esc(n[4])}`));
+      D.lp.filter(p => p[6] === "piper").forEach(p => L.circleMarker([p[0], p[1]], { radius: 4, color: col(`--c${p[2]}`), weight: 1, fillOpacity: .9 }).addTo(over).bindPopup(`<b>${esc(p[3] || TYPES[p[2]])}</b>${fmt(p[4])} m from the line`));
+      vcard.className = "card"; vcard.innerHTML = `<b>Piper's line, 1882</b>From Ysgyryd Fawr (the Skirrid) north to Arthur's Stone, ${R.piper.length_km.toFixed(1)} km.<dl>${R.piper.named.map(n => `<dt>${esc(n.name.replace(", southern end of Hatterrall Hill", ""))}</dt><dd>${fmt(n.off_m)} m off</dd>`).join("")}</dl>Diamonds: the places Piper named. Dots: sites in my data within 500 m.`;
+      legend.innerHTML = `<span><i style="background:${hot}"></i>Ysgyryd Fawr to Arthur's Stone</span>`; }
+    pts.draw();
+  }
+  show(true);
+  window.__restyle = () => { for (const k in C) delete C[k]; tiles.setUrl(tileUrl()); show(false); };
+})();
+
+/* ===== make your own leys ===== */
+(() => {
+  const cv = document.getElementById("leycv"), g = cv.getContext("2d"), nI = document.getElementById("leyn"), wI = document.getElementById("leyw");
+  const SIDE = 40000, A = SIDE * SIDE; let pts = []; let seed = 11;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  /* moments of pair distance from the published curve: E_k = C(n,2) C(n-2,k-2) (w/A)^(k-2) M_{k-2} */
+  const row = R.curve.rows.find(r => r.width_m === 100 && r.n_points === 200);
+  const comb = (n, k) => { let v = 1; for (let i = 0; i < k; i++) v = v * (n - i) / (i + 1); return v; };
+  const M = { 1: row.expected_3 / (comb(200, 2) * comb(198, 1) * (100 / A)), 2: row.expected_4 / (comb(200, 2) * comb(198, 2) * (100 / A) ** 2) };
+  const expect = (n, w, k) => comb(n, 2) * comb(n - 2, k - 2) * (w / A) ** (k - 2) * M[k - 2];
+  function scatter() { const n = +nI.value; pts = []; for (let i = 0; i < n; i++) pts.push([rnd() * SIDE, rnd() * SIDE]); run(); }
+  function run() {
+    const n = pts.length, hw = +wI.value / 2; document.getElementById("leynout").textContent = n; document.getElementById("leywout").textContent = wI.value + " m";
+    const found = []; let c3 = 0, c4 = 0;
+    for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) { const dx = pts[j][0] - pts[i][0], dy = pts[j][1] - pts[i][1], d = Math.hypot(dx, dy); if (d < 1000 || d > 20000) continue;
+      const ux = dx / d, uy = dy / d; const mem = [];
+      for (let l = 0; l < n; l++) { if (l === i || l === j) continue; const vx = pts[l][0] - pts[i][0], vy = pts[l][1] - pts[i][1], t = vx * ux + vy * uy; if (t <= 0 || t >= d) continue; if (Math.abs(vx * uy - vy * ux) <= hw) mem.push(l); }
+      c3 += mem.length; c4 += mem.length * (mem.length - 1) / 2; if (mem.length >= 2) found.push([i, j, mem.length + 2]); }
+    found.sort((a, b) => b[2] - a[2]);
+    const W = cv.width, s = W / SIDE; g.clearRect(0, 0, W, W); g.fillStyle = css("--card"); g.fillRect(0, 0, W, W);
+    g.lineCap = "round"; const hot = css("--hot");
+    found.slice(0, 600).forEach(([i, j, m]) => { g.strokeStyle = hot; g.globalAlpha = m >= 5 ? .95 : .5; g.lineWidth = m >= 6 ? 5 : m === 5 ? 3.5 : 2; g.beginPath(); g.moveTo(pts[i][0] * s, W - pts[i][1] * s); g.lineTo(pts[j][0] * s, W - pts[j][1] * s); g.stroke(); });
+    g.globalAlpha = 1; g.fillStyle = css("--fg"); pts.forEach(p => { g.beginPath(); g.arc(p[0] * s, W - p[1] * s, 5, 0, 6.2832); g.fill(); });
+    document.getElementById("leyc4").textContent = fmt(found.length);
+    document.getElementById("leytxt").innerHTML = `This scatter has <b>${fmt(c4)}</b> sets of four points in a line (formula: about ${fmt(expect(n, +wI.value, 4))} on average) and <b>${fmt(c3)}</b> sets of three (about ${fmt(expect(n, +wI.value, 3))}). The longest line holds <b>${found.length ? found[0][2] : (c3 ? 3 : 0)}</b> points. ${n} points in this square is ${(n / 16).toFixed(1)} per 100 km²; Herefordshire has ${R.regions.herefordshire.sets.all.per_100km2.toFixed(1)} places per 100 km² in my data.`;
+  }
+  nI.oninput = scatter; wI.oninput = run; document.getElementById("leyagain").onclick = () => { seed = Math.floor(Math.random() * 1e9) + 1; scatter(); };
+  scatter(); redraws.push(run);
+})();
+
+/* ===== density curve ===== */
+resp(document.getElementById("curve"), (w, sm) => {
+  const H = sm ? 300 : 360, m = { l: 54, r: 14, t: 14, b: 44 }; const svg = el("svg", { viewBox: `0 0 ${w} ${H}` }, document.getElementById("curve"));
+  const rows = R.curve.rows, X0 = Math.log10(1), X1 = Math.log10(80), Y0 = Math.log10(.01), Y1 = Math.log10(1e6);
+  const cp = el("clipPath", { id: "cvclip" }, el("defs", {}, svg)); el("rect", { x: m.l, y: m.t, width: w - m.l - m.r, height: H - m.t - m.b }, cp);
+  const x = v => m.l + (Math.log10(v) - X0) / (X1 - X0) * (w - m.l - m.r), y = v => H - m.b - (Math.log10(Math.max(v, .01)) - Y0) / (Y1 - Y0) * (H - m.t - m.b);
+  [.01, 1, 100, 1e4, 1e6].forEach(v => { el("line", { x1: m.l, x2: w - m.r, y1: y(v), y2: y(v), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, y(v) + 4, v >= 1e4 ? (v / 1e3).toLocaleString("en-GB") + "k" : String(v), "lab m s", "end"); });
+  [1, 2, 5, 10, 20, 50].forEach(v => { el("line", { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); lbl(svg, x(v), H - m.b + 16, String(v), "lab m s", "middle"); });
+  lbl(svg, (m.l + w - m.r) / 2, H - 6, "points (places) per 100 km²", "lab m", "middle");
+  const W = [50, 100, 200, 400], op = [.45, 1, .7, .45];
+  W.forEach((wd, i) => { const rr = rows.filter(r => r.width_m === wd); const d = rr.map((r, k) => `${k ? "L" : "M"}${x(r.density_per_100km2).toFixed(1)},${y(r.expected_4).toFixed(1)}`).join("");
+    el("path", { d, fill: "none", stroke: wd === 100 ? "var(--teal)" : "var(--muted)", "stroke-width": wd === 100 ? 2.6 : 1.4, opacity: op[i], "clip-path": "url(#cvclip)" }, svg);
+    const ex = 2.2, e4 = Math.exp(Math.log(rr[0].expected_4) + (Math.log(ex) - Math.log(rr[0].density_per_100km2)) * 4); lbl(svg, x(ex) - 4, y(e4) - 6, `${wd} m`, wd === 100 ? "lab b" : "lab m s", "end"); });
+  Object.entries(R.regions).forEach(([k, g]) => { const s = g.sets.all; const c = el("circle", { cx: x(s.per_100km2), cy: y(s.obs["4"]), r: 6, fill: "var(--hot)", stroke: "var(--bg)", "stroke-width": 1.5 }, svg);
+    hover(c, `<b>${esc(g.label)}</b><br>${s.per_100km2.toFixed(1)} places per 100 km²<br>${fmt(s.obs["4"])} real lines of four`);
+    const pos = { herefordshire: [9, 16, "start"], cambridge: [-9, -4, "end"], penwith: [9, 4, "start"], wiltshire: [-9, -4, "end"] }[k];
+    lbl(svg, x(s.per_100km2) + pos[0], y(s.obs["4"]) + pos[1], g.label, "lab s", pos[2]); });
+});
+
+/* ===== region chart (ratios) ===== */
+resp(document.getElementById("regchart"), (w, sm) => {
+  const rows = []; const SL = { all: "All places", prehistoric: "Prehistoric only", churches: "Churches only" };
+  Object.entries(R.regions).forEach(([k, g]) => { rows.push({ head: true, g }); ["all", "prehistoric", "churches"].forEach(sk => { const s = g.sets[sk]; if (s.obs["4"] === 0 && s.nulls.uniform["4"].mean < 1) return; rows.push({ k, g, sk, s }); }); });
+  const rh = 28, top = 36, H = top + rows.length * rh + 34, m = { l: sm ? 108 : 150, r: 18 };
+  const svg = el("svg", { viewBox: `0 0 ${w} ${H}` }, document.getElementById("regchart"));
+  const L0 = Math.log10(.1), L1 = Math.log10(30); const x = v => m.l + (Math.log10(Math.max(.1, Math.min(30, v))) - L0) / (L1 - L0) * (w - m.l - m.r);
+  [.1, .3, 1, 3, 10, 30].forEach(v => { el("line", { x1: x(v), x2: x(v), y1: top - 8, y2: H - 30, stroke: v === 1 ? "var(--fg)" : "var(--rule)", "stroke-width": v === 1 ? 1.4 : 1 }, svg); lbl(svg, x(v), H - 14, v + "x", "lab m s", "middle"); });
+  lbl(svg, x(1) + 6, top - 10, "chance", "lab m s");
+  const NC = { uniform: "var(--muted)", jitter: "var(--teal)", shuffle: "var(--c1)" }, NL = { uniform: "even scatter", jitter: "nudged sites", shuffle: "shuffled places" };
+  rows.forEach((r, i) => { const yy = top + i * rh + rh / 2;
+    if (r.head) { if (i) el("line", { x1: 0, x2: w - m.r, y1: yy - rh / 2, y2: yy - rh / 2, stroke: "var(--rule)" }, svg); lbl(svg, 0, yy + 8, r.g.label, "lab b"); return; }
+    lbl(svg, 12, yy + 4, SL[r.sk], "lab m s");
+    const nl = Object.keys(r.s.nulls); nl.forEach((n, q) => { const v = r.s.nulls[n]["4"], o = r.s.obs["4"]; const off = (q - (nl.length - 1) / 2) * 7;
+      const lo = v.hi > 0 ? o / v.hi : 30, hi = v.lo > 0 ? o / v.lo : 30, mid = v.mean > 0 ? o / v.mean : 30;
+      el("line", { x1: x(lo), x2: x(hi), y1: yy + off, y2: yy + off, stroke: NC[n], "stroke-width": 3, opacity: .55, "stroke-linecap": "round" }, svg);
+      const c = el("circle", { cx: x(mid), cy: yy + off, r: 4.5, fill: NC[n], stroke: "var(--bg)", "stroke-width": 1 }, svg);
+      hover(c, `<b>${esc(r.g.label)}, ${SL[r.sk].toLowerCase()}</b><br>${fmt(o)} real lines of four<br>${NL[n]}: ${v.mean.toLocaleString("en-GB", { maximumFractionDigits: 1 })} on average (95%: ${fmt(v.lo)} to ${fmt(v.hi)})<br>real count matched or beaten in ${pc(v.p, 1)} of 300 runs`); }); });
+  const lg = el("g", {}, svg); let lx = sm ? 0 : m.l; ["uniform", "jitter", "shuffle"].forEach(n => { el("circle", { cx: lx + 5, cy: 8, r: 4.5, fill: NC[n] }, lg); const t = lbl(lg, lx + 14, 12, NL[n], "lab s"); lx += 14 + NL[n].length * 7.2 + 16; });
+});
+(() => { const t = document.getElementById("regtable"); const SL = { all: "All", prehistoric: "Prehistoric", churches: "Churches" };
+  let h = `<tr><th>Landscape</th><th>Places</th><th class="num">Real</th><th class="num">Even scatter</th><th class="num">Nudged</th><th class="num">Shuffled</th></tr>`;
+  Object.values(R.regions).forEach(g => ["all", "prehistoric", "churches"].forEach(sk => { const s = g.sets[sk], f = n => s.nulls[n] ? `${s.nulls[n]["4"].mean.toLocaleString("en-GB", { maximumFractionDigits: 1 })}` : "";
+    h += `<tr><td>${sk === "all" ? esc(g.label) : ""}</td><td>${SL[sk]} (${fmt(s.n)})</td><td class="num"><b>${fmt(s.obs["4"])}</b></td><td class="num">${f("uniform")}</td><td class="num">${f("jitter")}</td><td class="num">${f("shuffle")}</td></tr>`; }));
+  t.innerHTML = `<caption style="text-align:left;font:600 17px/1.3 var(--display);margin-bottom:6px">Lines of four places, real and average of 300 random versions</caption>` + h; })();
+
+/* ===== random lines ===== */
+resp(document.getElementById("rlchart"), (w, sm) => {
+  const order = ["gb", "herefordshire", "penwith", "cambridge", "wiltshire"], L = { gb: "Great Britain", herefordshire: "Herefordshire", penwith: "West Penwith", cambridge: "Around Cambridge", wiltshire: "Avebury and Stonehenge" };
+  const rh = 34, top = 26, H = top + order.length * rh + 10, m = { l: sm ? 116 : 190, r: 10 }; const svg = el("svg", { viewBox: `0 0 ${w} ${H}` }, document.getElementById("rlchart"));
+  const cats = ["0", "1", "2", "3 or more"], cc = ["var(--rule)", "var(--teal2)", "var(--teal)", "var(--hot)"]; const ww = w - m.l - m.r;
+  let lx = m.l; cats.forEach((c, i) => { el("rect", { x: lx, y: 2, width: 12, height: 12, fill: cc[i] }, svg); lbl(svg, lx + 16, 12, c + (i === 0 ? " sites" : ""), "lab s"); lx += 34 + c.length * 7 + (i === 0 ? 40 : 0); });
+  order.forEach((k, i) => { const r = R.random_lines[k]; const hh = r.hist, tot = hh.reduce((a, b) => a + b, 0); const v = [hh[0], hh[1], hh[2], tot - hh[0] - hh[1] - hh[2]]; const yy = top + i * rh;
+    lbl(svg, 0, yy + 18, L[k], "lab" + (sm ? " s" : "")); let x0 = m.l;
+    v.forEach((n, q) => { const wd = n / tot * ww; const rc = el("rect", { x: x0, y: yy + 4, width: Math.max(0, wd - 1), height: rh - 10, fill: cc[q] }, svg); hover(rc, `<b>${L[k]}</b><br>${pc(n / tot, 1)} of random ${r.length_km} km lines pass within 50 m of ${cats[q]} site${q === 1 ? "" : "s"}`); if (wd > 38 && q > 0) lbl(svg, x0 + wd / 2, yy + rh / 2 + 3, pc(n / tot), "lab s", "middle").setAttribute("style", q >= 2 ? "fill:var(--bg)" : ""); x0 += wd; }); });
+});
+
+/* ===== Saint Michael chart ===== */
+resp(document.getElementById("michchart"), (w, sm) => {
+  const K = [["all", "All sites", "1km_all"], ["prehistoric", "Prehistoric", "1km_prehistoric"], ["churches", "Churches", "1km_churches"], ["michael", "St Michael churches", "1km_michael"]];
+  const cols = sm ? 2 : 4, pw = (w - (cols - 1) * 16) / cols, ph = 150, H = Math.ceil(K.length / cols) * (ph + 50);
+  const svg = el("svg", { viewBox: `0 0 ${w} ${H}` }, document.getElementById("michchart"));
+  K.forEach(([k, name, ck], i) => { const ox = (i % cols) * (pw + 16), oy = Math.floor(i / cols) * (ph + 50); const v = D.mrates[k], c = R.michael.comp[ck];
+    const mx = Math.max(...v, c.real_per100) * 1.05, nb = 24, bins = new Array(nb).fill(0); v.forEach(a => bins[Math.min(nb - 1, Math.floor(a / mx * nb))]++); const bm = Math.max(...bins);
+    const x = a => ox + a / mx * pw, y0 = oy + 22 + ph - 30;
+    lbl(svg, ox, oy + 12, name, "lab b");
+    bins.forEach((b, q) => el("rect", { x: x(q * mx / nb) + .5, y: y0 - b / bm * (ph - 40), width: Math.max(0, pw / nb - 1), height: b / bm * (ph - 40), fill: "var(--muted)", opacity: .45 }, svg));
+    el("line", { x1: x(c.real_per100), x2: x(c.real_per100), y1: oy + 24, y2: y0, stroke: "var(--hot)", "stroke-width": 3 }, svg);
+    el("line", { x1: ox, x2: ox + pw, y1: y0, y2: y0, stroke: "var(--fg)" }, svg);
+    lbl(svg, ox, y0 + 15, "0", "lab m s"); lbl(svg, ox + pw, y0 + 15, mx.toFixed(mx < 10 ? 1 : 0), "lab m s", "end");
+    const t = lbl(svg, x(c.real_per100) + (c.pct_rank > 70 ? -5 : 5), oy + 34, `${c.real_per100.toFixed(1)}`, "lab b", c.pct_rank > 70 ? "end" : "start"); t.setAttribute("style", "fill:var(--hot)");
+    lbl(svg, ox, y0 + 32, `${Math.round(c.pct_rank)}th percentile`, "lab s");
+    const hit = el("rect", { x: ox, y: oy, width: pw, height: ph + 20, fill: "transparent" }, svg);
+    hover(hit, `<b>${name} within 1 km</b><br>Real line: ${fmt(c.real)} (${c.real_per100.toFixed(1)} per 100 km)<br>Moved lines: ${c.null_mean_per100.toFixed(1)} per 100 km on average (95%: ${c.null_lo.toFixed(1)} to ${c.null_hi.toFixed(1)})<br>${pc(c.share_null_ge, 1)} of moved lines do as well or better`); });
+});
+
+/* ===== Piper chart ===== */
+resp(document.getElementById("piperchart"), (w, sm) => {
+  const P = R.piper, H = 210, m = { l: 12, r: 12, t: 30, b: 40 }; const svg = el("svg", { viewBox: `0 0 ${w} ${H}` }, document.getElementById("piperchart"));
+  const x = a => m.l + a / P.length_km * (w - m.l - m.r), mxo = 2000, y = o => m.t + o / mxo * (H - m.t - m.b);
+  [0, 500, 1000, 1500, 2000].forEach(o => { el("line", { x1: m.l, x2: w - m.r, y1: y(o), y2: y(o), stroke: o ? "var(--rule)" : "var(--hot)", "stroke-width": o ? 1 : 3 }, svg); if (o) lbl(svg, w - m.r, y(o) - 3, o + " m", "lab m s", "end"); });
+  lbl(svg, m.l, m.t - 10, "Ysgyryd Fawr", "lab b"); lbl(svg, w - m.r, m.t - 10, "Arthur's Stone", "lab b", "end");
+  lbl(svg, (m.l + w - m.r) / 2, H - 8, `distance along the line, 0 to ${P.length_km.toFixed(1)} km`, "lab m s", "middle");
+  P.named.forEach((n, i) => { const cx = x(n.along_km), cy = y(n.off_m); el("line", { x1: cx, x2: cx, y1: y(0), y2: cy, stroke: "var(--muted)", "stroke-dasharray": "2 3" }, svg);
+    const c = el("circle", { cx, cy, r: 6, fill: "var(--fg)" }, svg); hover(c, `<b>${esc(n.name)}</b><br>${fmt(n.off_m)} m from the line, ${n.along_km.toFixed(1)} km along`);
+    const short = n.name.replace(", southern end of Hatterrall Hill", "").replace(" camp", " camp");
+    const left = n.along_km > P.length_km * .7 && n.off_m < 400 && i < P.named.length - 1;
+    if (!sm || i % 2 === 0 || n.off_m > 1000) lbl(svg, cx + (left ? -9 : 8), cy + (left ? 18 : 4), short, "lab s", left ? "end" : "start"); });
+});
+</script>
+</body>
+</html>
