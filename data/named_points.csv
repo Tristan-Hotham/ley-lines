@@ -1,0 +1,15 @@
+line,order,name,lat,lon,x,y,location_source
+piper,0,Ysgyryd Fawr (Skirrid Fawr),51.85883,-2.97276,333105.2,218252.4,"OS Open Names point for the hill (landform), OGL v3"
+piper,1,"Pen Twyn camp, southern end of Hatterrall Hill",51.901619,-2.988184,332107.6,223025.7,"Atlas of Hillforts no. 2433, Pen Twyn, Llanfihangel Crucorney (my identification of Piper's 'camp')"
+piper,2,Hatterrall Hill,51.92512,-3.00724,330832.7,225657.5,"OS Open Names point for the hill (landform), OGL v3"
+piper,3,Oldcastle,51.91596,-2.98303,332483.8,224615.9,"OS Open Names point for the hamlet, OGL v3"
+piper,4,Longtown Castle,51.956952,-2.989916,332072.2,229181.5,Wikidata Q6674369 (CC0)
+piper,5,Urishay Castle,52.0323,-2.9882,332304.0,237560.2,Wikidata Q7900646 (CC0)
+piper,6,Snodhill Castle,52.0574,-2.98969,332239.9,240353.3,Wikidata Q17537708 (CC0)
+piper,7,"Arthur's Stone, Dorstone",52.082306,-2.995361,331889.0,243128.8,"English Wikipedia, Arthur's Stone, Herefordshire (infobox 52.082306 N 2.995361 W, SO318430)"
+michael,0,St Michael's Mount,50.11652,-5.47791,151467.2,29842.7,Wikidata Q24659597 St Michael's Mount Castle (CC0)
+michael,1,"St Michael de Rupe, Brentor",50.6033,-4.16236,247076.7,80407.9,Wikidata Q17527559 (CC0)
+michael,2,Creech St Michael,51.0271,-3.03903,327229.3,125817.5,"OS Open Names point for the village, OGL v3"
+michael,3,Burrow Mump church,51.070481,-2.916189,335904.0,130527.4,Wikidata Q26628318 (CC0)
+michael,4,"St Michael's Church, Glastonbury Tor",51.1445,-2.69903,351197.2,138592.0,Wikidata Q17675070 (CC0)
+watkins,0,Blackwardine,52.20545,-2.685278,353266.8,256579.8,"English Wikipedia, Blackwardine (coord from Pastscape via the article)"

@@ -1,0 +1,2705 @@
+{
+ "meta": {
+  "pulled": "27 October 2026",
+  "doi": "10.5281/zenodo.23691885",
+  "slug": "ley-lines",
+  "url": "https://tristan-hotham.github.io/ley-lines/",
+  "blog": "https://blog.tristanhotham.com/2026/10/27/ley-lines/"
+ },
+ "sites": {
+  "raw_records": {
+   "church": 38941,
+   "stone_circle": 1049,
+   "megalith": 835,
+   "barrow": 12433,
+   "hillfort": 3610,
+   "holy_well": 373
+  },
+  "gb_records": {
+   "church": 37492,
+   "stone_circle": 1010,
+   "megalith": 752,
+   "barrow": 12379,
+   "hillfort": 3558,
+   "holy_well": 372
+  },
+  "gb_total": 55563,
+  "merged_sites": 50822,
+  "merged_by_cat": {
+   "church": 35215,
+   "holy_well": 368,
+   "hillfort": 3517,
+   "megalith": 584,
+   "barrow": 10547,
+   "stone_circle": 591
+  },
+  "any_cat": {
+   "church": 35298,
+   "holy_well": 368,
+   "hillfort": 3557,
+   "megalith": 621,
+   "barrow": 10722,
+   "stone_circle": 591
+  },
+  "multi_type_sites": 331,
+  "prehistoric_sites": 15239,
+  "church_sites": 35298,
+  "michael_churches": 1081,
+  "merge_m": 50.0,
+  "church_decimals": {
+   "1": 13,
+   "2": 139,
+   "3": 1378,
+   "4": 13674,
+   "5": 2310,
+   "6": 21427
+  },
+  "gb_land_km2": 229790,
+  "bad_church_coords": 4
+ },
+ "places": {
+  "n": 41920,
+  "prehistoric": 12529,
+  "church_only": 29188,
+  "multi_site": 6065,
+  "sites": 50822
+ },
+ "params": {
+  "place_m": 250.0,
+  "corridor_m": 100.0,
+  "lmin_km": 1.0,
+  "lmax_km": 20.0,
+  "widths": [
+   50,
+   100,
+   200,
+   400
+  ],
+  "nsim_main": 300,
+  "nsim_widths": 100,
+  "jitter_m": 1000
+ },
+ "regions": {
+  "herefordshire": {
+   "label": "Herefordshire",
+   "long": "Herefordshire, around Hereford and Blackwardine (Watkins's country)",
+   "land_km2": 1600.0,
+   "maximal_4plus": 426,
+   "maximal_4plus_prehistoric_only": 2,
+   "sim_maximal_4plus": 327,
+   "sets": {
+    "all": {
+     "n": 278,
+     "per_100km2": 17.38,
+     "obs": {
+      "3": 4305,
+      "4": 759,
+      "5": 156,
+      "6": 30
+     },
+     "longest": 7,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 3973.2,
+        "lo": 3451.5,
+        "hi": 4619.0,
+        "p": 0.14666666666666667,
+        "ratio": 1.08
+       },
+       "4": {
+        "mean": 493.8,
+        "lo": 367.9,
+        "hi": 689.1,
+        "p": 0.006666666666666667,
+        "ratio": 1.54
+       },
+       "5": {
+        "mean": 44.9,
+        "lo": 20.0,
+        "hi": 97.6,
+        "p": 0.0,
+        "ratio": 3.48
+       },
+       "6": {
+        "mean": 3.3,
+        "lo": 0.0,
+        "hi": 14.0,
+        "p": 0.01,
+        "ratio": 8.99
+       },
+       "longest_mean": 5.97,
+       "longest_share_ge": 0.11666666666666667
+      },
+      "jitter": {
+       "3": {
+        "mean": 4396.7,
+        "lo": 4161.8,
+        "hi": 4706.1,
+        "p": 0.69,
+        "ratio": 0.98
+       },
+       "4": {
+        "mean": 721.4,
+        "lo": 576.9,
+        "hi": 951.5,
+        "p": 0.32,
+        "ratio": 1.05
+       },
+       "5": {
+        "mean": 104.0,
+        "lo": 50.5,
+        "hi": 216.5,
+        "p": 0.1,
+        "ratio": 1.5
+       },
+       "6": {
+        "mean": 13.9,
+        "lo": 1.0,
+        "hi": 55.0,
+        "p": 0.07666666666666666,
+        "ratio": 2.16
+       },
+       "longest_mean": 6.52,
+       "longest_share_ge": 0.44
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 199,
+       "uniform4": 121.7,
+       "obs3": 2163,
+       "uniform3": 1980.5
+      },
+      "100": {
+       "obs4": 759,
+       "uniform4": 493.8,
+       "obs3": 4305,
+       "uniform3": 3973.2
+      },
+      "200": {
+       "obs4": 3219,
+       "uniform4": 1915.1,
+       "obs3": 8864,
+       "uniform3": 7832.4
+      },
+      "400": {
+       "obs4": 12664,
+       "uniform4": 7897.1,
+       "obs3": 17702,
+       "uniform3": 16004.1
+      }
+     }
+    },
+    "prehistoric": {
+     "n": 60,
+     "per_100km2": 3.75,
+     "obs": {
+      "3": 38,
+      "4": 3,
+      "5": 0,
+      "6": 0
+     },
+     "longest": 4,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 38.4,
+        "lo": 22.0,
+        "hi": 62.0,
+        "p": 0.46,
+        "ratio": 0.99
+       },
+       "4": {
+        "mean": 0.9,
+        "lo": 0.0,
+        "hi": 4.0,
+        "p": 0.09,
+        "ratio": 3.16
+       },
+       "5": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "6": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": null
+       },
+       "longest_mean": 3.56,
+       "longest_share_ge": 0.55
+      },
+      "jitter": {
+       "3": {
+        "mean": 43.1,
+        "lo": 28.5,
+        "hi": 64.0,
+        "p": 0.7066666666666667,
+        "ratio": 0.88
+       },
+       "4": {
+        "mean": 2.7,
+        "lo": 0.0,
+        "hi": 8.5,
+        "p": 0.4,
+        "ratio": 1.13
+       },
+       "5": {
+        "mean": 0.1,
+        "lo": 0.0,
+        "hi": 1.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "6": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "longest_mean": 3.95,
+       "longest_share_ge": 0.85
+      },
+      "shuffle": {
+       "3": {
+        "mean": 41.8,
+        "lo": 22.0,
+        "hi": 78.5,
+        "p": 0.5733333333333334,
+        "ratio": 0.91
+       },
+       "4": {
+        "mean": 1.6,
+        "lo": 0.0,
+        "hi": 8.0,
+        "p": 0.16666666666666666,
+        "ratio": 1.9
+       },
+       "5": {
+        "mean": 0.1,
+        "lo": 0.0,
+        "hi": 1.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "6": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "longest_mean": 3.72,
+       "longest_share_ge": 0.65
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 0,
+       "uniform4": 0.4,
+       "obs3": 18,
+       "uniform3": 20.1
+      },
+      "100": {
+       "obs4": 3,
+       "uniform4": 0.9,
+       "obs3": 38,
+       "uniform3": 38.4
+      },
+      "200": {
+       "obs4": 7,
+       "uniform4": 3.5,
+       "obs3": 77,
+       "uniform3": 75.1
+      },
+      "400": {
+       "obs4": 50,
+       "uniform4": 14.0,
+       "obs3": 182,
+       "uniform3": 150.8
+      }
+     }
+    },
+    "churches": {
+     "n": 217,
+     "per_100km2": 13.56,
+     "obs": {
+      "3": 2671,
+      "4": 474,
+      "5": 116,
+      "6": 27
+     },
+     "longest": 7,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 1886.9,
+        "lo": 1632.9,
+        "hi": 2205.6,
+        "p": 0.0,
+        "ratio": 1.42
+       },
+       "4": {
+        "mean": 180.7,
+        "lo": 126.0,
+        "hi": 249.6,
+        "p": 0.0,
+        "ratio": 2.62
+       },
+       "5": {
+        "mean": 12.6,
+        "lo": 4.0,
+        "hi": 29.5,
+        "p": 0.0,
+        "ratio": 9.19
+       },
+       "6": {
+        "mean": 0.9,
+        "lo": 0.0,
+        "hi": 7.5,
+        "p": 0.006666666666666667,
+        "ratio": 31.4
+       },
+       "longest_mean": 5.4,
+       "longest_share_ge": 0.03666666666666667
+      },
+      "jitter": {
+       "3": {
+        "mean": 2671.6,
+        "lo": 2474.0,
+        "hi": 2922.6,
+        "p": 0.47,
+        "ratio": 1.0
+       },
+       "4": {
+        "mean": 416.2,
+        "lo": 306.2,
+        "hi": 597.0,
+        "p": 0.18333333333333332,
+        "ratio": 1.14
+       },
+       "5": {
+        "mean": 59.0,
+        "lo": 24.0,
+        "hi": 145.5,
+        "p": 0.04666666666666667,
+        "ratio": 1.97
+       },
+       "6": {
+        "mean": 7.7,
+        "lo": 0.0,
+        "hi": 39.5,
+        "p": 0.05333333333333334,
+        "ratio": 3.52
+       },
+       "longest_mean": 6.3,
+       "longest_share_ge": 0.31
+      },
+      "shuffle": {
+       "3": {
+        "mean": 2031.3,
+        "lo": 1744.4,
+        "hi": 2337.1,
+        "p": 0.0,
+        "ratio": 1.31
+       },
+       "4": {
+        "mean": 276.9,
+        "lo": 172.0,
+        "hi": 403.1,
+        "p": 0.0,
+        "ratio": 1.71
+       },
+       "5": {
+        "mean": 43.7,
+        "lo": 11.5,
+        "hi": 101.5,
+        "p": 0.0033333333333333335,
+        "ratio": 2.66
+       },
+       "6": {
+        "mean": 6.4,
+        "lo": 0.0,
+        "hi": 25.0,
+        "p": 0.02,
+        "ratio": 4.22
+       },
+       "longest_mean": 6.14,
+       "longest_share_ge": 0.25666666666666665
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 126,
+       "uniform4": 44.3,
+       "obs3": 1340,
+       "uniform3": 937.7
+      },
+      "100": {
+       "obs4": 474,
+       "uniform4": 180.7,
+       "obs3": 2671,
+       "uniform3": 1886.9
+      },
+      "200": {
+       "obs4": 2008,
+       "uniform4": 708.1,
+       "obs3": 5491,
+       "uniform3": 3740.5
+      },
+      "400": {
+       "obs4": 7810,
+       "uniform4": 2959.4,
+       "obs3": 10949,
+       "uniform3": 7599.0
+      }
+     }
+    }
+   }
+  },
+  "penwith": {
+   "label": "West Penwith",
+   "long": "West Penwith, Cornwall (John Michell's case study)",
+   "land_km2": 307.3,
+   "maximal_4plus": 243,
+   "maximal_4plus_prehistoric_only": 34,
+   "sim_maximal_4plus": 215,
+   "sets": {
+    "all": {
+     "n": 106,
+     "per_100km2": 34.49,
+     "obs": {
+      "3": 1973,
+      "4": 549,
+      "5": 158,
+      "6": 44
+     },
+     "longest": 8,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 1567.2,
+        "lo": 1353.0,
+        "hi": 1877.0,
+        "p": 0.006666666666666667,
+        "ratio": 1.26
+       },
+       "4": {
+        "mean": 298.8,
+        "lo": 203.0,
+        "hi": 453.5,
+        "p": 0.0,
+        "ratio": 1.84
+       },
+       "5": {
+        "mean": 42.8,
+        "lo": 15.5,
+        "hi": 97.0,
+        "p": 0.0,
+        "ratio": 3.7
+       },
+       "6": {
+        "mean": 5.0,
+        "lo": 0.0,
+        "hi": 19.5,
+        "p": 0.01,
+        "ratio": 8.73
+       },
+       "longest_mean": 6.18,
+       "longest_share_ge": 0.02
+      },
+      "jitter": {
+       "3": {
+        "mean": 1934.8,
+        "lo": 1759.2,
+        "hi": 2130.1,
+        "p": 0.3233333333333333,
+        "ratio": 1.02
+       },
+       "4": {
+        "mean": 480.0,
+        "lo": 349.4,
+        "hi": 637.2,
+        "p": 0.17333333333333334,
+        "ratio": 1.14
+       },
+       "5": {
+        "mean": 96.3,
+        "lo": 41.5,
+        "hi": 203.7,
+        "p": 0.08,
+        "ratio": 1.64
+       },
+       "6": {
+        "mean": 16.6,
+        "lo": 2.0,
+        "hi": 63.0,
+        "p": 0.07333333333333333,
+        "ratio": 2.65
+       },
+       "longest_mean": 6.73,
+       "longest_share_ge": 0.12666666666666668
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 128,
+       "uniform4": 76.0,
+       "obs3": 980,
+       "uniform3": 784.1
+      },
+      "100": {
+       "obs4": 549,
+       "uniform4": 298.8,
+       "obs3": 1973,
+       "uniform3": 1567.2
+      },
+      "200": {
+       "obs4": 2153,
+       "uniform4": 1200.7,
+       "obs3": 3992,
+       "uniform3": 3137.0
+      },
+      "400": {
+       "obs4": 8671,
+       "uniform4": 4855.9,
+       "obs3": 7949,
+       "uniform3": 6302.0
+      }
+     }
+    },
+    "prehistoric": {
+     "n": 54,
+     "per_100km2": 17.57,
+     "obs": {
+      "3": 406,
+      "4": 103,
+      "5": 29,
+      "6": 7
+     },
+     "longest": 7,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 202.0,
+        "lo": 151.9,
+        "hi": 262.0,
+        "p": 0.0,
+        "ratio": 2.01
+       },
+       "4": {
+        "mean": 19.2,
+        "lo": 7.0,
+        "hi": 39.5,
+        "p": 0.0,
+        "ratio": 5.37
+       },
+       "5": {
+        "mean": 1.4,
+        "lo": 0.0,
+        "hi": 6.5,
+        "p": 0.0,
+        "ratio": 21.07
+       },
+       "6": {
+        "mean": 0.1,
+        "lo": 0.0,
+        "hi": 1.0,
+        "p": 0.0,
+        "ratio": 105.0
+       },
+       "longest_mean": 4.7,
+       "longest_share_ge": 0.0
+      },
+      "jitter": {
+       "3": {
+        "mean": 382.8,
+        "lo": 322.9,
+        "hi": 472.1,
+        "p": 0.25,
+        "ratio": 1.06
+       },
+       "4": {
+        "mean": 76.1,
+        "lo": 41.5,
+        "hi": 138.1,
+        "p": 0.13666666666666666,
+        "ratio": 1.35
+       },
+       "5": {
+        "mean": 12.4,
+        "lo": 2.0,
+        "hi": 38.5,
+        "p": 0.06,
+        "ratio": 2.34
+       },
+       "6": {
+        "mean": 1.6,
+        "lo": 0.0,
+        "hi": 8.0,
+        "p": 0.06666666666666667,
+        "ratio": 4.25
+       },
+       "longest_mean": 5.6,
+       "longest_share_ge": 0.08666666666666667
+      },
+      "shuffle": {
+       "3": {
+        "mean": 254.2,
+        "lo": 194.8,
+        "hi": 325.0,
+        "p": 0.0,
+        "ratio": 1.6
+       },
+       "4": {
+        "mean": 35.5,
+        "lo": 13.5,
+        "hi": 78.0,
+        "p": 0.0033333333333333335,
+        "ratio": 2.9
+       },
+       "5": {
+        "mean": 5.0,
+        "lo": 0.0,
+        "hi": 23.6,
+        "p": 0.016666666666666666,
+        "ratio": 5.74
+       },
+       "6": {
+        "mean": 0.7,
+        "lo": 0.0,
+        "hi": 6.0,
+        "p": 0.023333333333333334,
+        "ratio": 10.34
+       },
+       "longest_mean": 5.21,
+       "longest_share_ge": 0.03333333333333333
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 18,
+       "uniform4": 4.6,
+       "obs3": 205,
+       "uniform3": 102.6
+      },
+      "100": {
+       "obs4": 103,
+       "uniform4": 19.2,
+       "obs3": 406,
+       "uniform3": 202.0
+      },
+      "200": {
+       "obs4": 371,
+       "uniform4": 70.5,
+       "obs3": 846,
+       "uniform3": 389.4
+      },
+      "400": {
+       "obs4": 1534,
+       "uniform4": 295.6,
+       "obs3": 1670,
+       "uniform3": 793.3
+      }
+     }
+    },
+    "churches": {
+     "n": 49,
+     "per_100km2": 15.94,
+     "obs": {
+      "3": 163,
+      "4": 14,
+      "5": 1,
+      "6": 0
+     },
+     "longest": 5,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 149.0,
+        "lo": 112.0,
+        "hi": 201.5,
+        "p": 0.22666666666666666,
+        "ratio": 1.09
+       },
+       "4": {
+        "mean": 12.2,
+        "lo": 4.0,
+        "hi": 26.0,
+        "p": 0.33,
+        "ratio": 1.14
+       },
+       "5": {
+        "mean": 0.7,
+        "lo": 0.0,
+        "hi": 4.0,
+        "p": 0.42333333333333334,
+        "ratio": 1.42
+       },
+       "6": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 1.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "longest_mean": 4.45,
+       "longest_share_ge": 0.42333333333333334
+      },
+      "jitter": {
+       "3": {
+        "mean": 165.1,
+        "lo": 130.0,
+        "hi": 222.5,
+        "p": 0.48,
+        "ratio": 0.99
+       },
+       "4": {
+        "mean": 18.2,
+        "lo": 6.0,
+        "hi": 41.0,
+        "p": 0.6666666666666666,
+        "ratio": 0.77
+       },
+       "5": {
+        "mean": 1.9,
+        "lo": 0.0,
+        "hi": 8.0,
+        "p": 0.6566666666666666,
+        "ratio": 0.54
+       },
+       "6": {
+        "mean": 0.2,
+        "lo": 0.0,
+        "hi": 1.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "longest_mean": 4.76,
+       "longest_share_ge": 0.6566666666666666
+      },
+      "shuffle": {
+       "3": {
+        "mean": 188.7,
+        "lo": 146.0,
+        "hi": 237.0,
+        "p": 0.8566666666666667,
+        "ratio": 0.86
+       },
+       "4": {
+        "mean": 23.2,
+        "lo": 9.0,
+        "hi": 49.0,
+        "p": 0.8366666666666667,
+        "ratio": 0.6
+       },
+       "5": {
+        "mean": 3.1,
+        "lo": 0.0,
+        "hi": 18.5,
+        "p": 0.7566666666666667,
+        "ratio": 0.32
+       },
+       "6": {
+        "mean": 0.4,
+        "lo": 0.0,
+        "hi": 6.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "longest_mean": 4.96,
+       "longest_share_ge": 0.7566666666666667
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 5,
+       "uniform4": 3.2,
+       "obs3": 88,
+       "uniform3": 76.3
+      },
+      "100": {
+       "obs4": 14,
+       "uniform4": 12.2,
+       "obs3": 163,
+       "uniform3": 149.0
+      },
+      "200": {
+       "obs4": 56,
+       "uniform4": 46.5,
+       "obs3": 329,
+       "uniform3": 292.1
+      },
+      "400": {
+       "obs4": 309,
+       "uniform4": 196.0,
+       "obs3": 701,
+       "uniform3": 587.2
+      }
+     }
+    }
+   }
+  },
+  "wiltshire": {
+   "label": "Avebury and Stonehenge",
+   "long": "Wiltshire, from Avebury to Stonehenge",
+   "land_km2": 1600.0,
+   "maximal_4plus": 15798,
+   "maximal_4plus_prehistoric_only": 7364,
+   "sim_maximal_4plus": 8243,
+   "sets": {
+    "all": {
+     "n": 667,
+     "per_100km2": 41.69,
+     "obs": {
+      "3": 113981,
+      "4": 78298,
+      "5": 44024,
+      "6": 20492
+     },
+     "longest": 11,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 55092.2,
+        "lo": 50572.5,
+        "hi": 60064.3,
+        "p": 0.0,
+        "ratio": 2.07
+       },
+       "4": {
+        "mean": 16308.0,
+        "lo": 14142.7,
+        "hi": 19073.0,
+        "p": 0.0,
+        "ratio": 4.8
+       },
+       "5": {
+        "mean": 3462.6,
+        "lo": 2750.9,
+        "hi": 4456.6,
+        "p": 0.0,
+        "ratio": 12.71
+       },
+       "6": {
+        "mean": 574.2,
+        "lo": 361.2,
+        "hi": 878.2,
+        "p": 0.0,
+        "ratio": 35.69
+       },
+       "longest_mean": 8.3,
+       "longest_share_ge": 0.0
+      },
+      "jitter": {
+       "3": {
+        "mean": 115944.1,
+        "lo": 113363.2,
+        "hi": 118874.1,
+        "p": 0.9166666666666666,
+        "ratio": 0.98
+       },
+       "4": {
+        "mean": 83014.9,
+        "lo": 77325.9,
+        "hi": 89554.9,
+        "p": 0.94,
+        "ratio": 0.94
+       },
+       "5": {
+        "mean": 50181.0,
+        "lo": 42814.5,
+        "hi": 59023.0,
+        "p": 0.9466666666666667,
+        "ratio": 0.88
+       },
+       "6": {
+        "mean": 26305.0,
+        "lo": 19338.9,
+        "hi": 35213.6,
+        "p": 0.9533333333333334,
+        "ratio": 0.78
+       },
+       "longest_mean": 12.47,
+       "longest_share_ge": 1.0
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 19685,
+       "uniform4": 4086.4,
+       "obs3": 57146,
+       "uniform3": 27608.2
+      },
+      "100": {
+       "obs4": 78298,
+       "uniform4": 16308.0,
+       "obs3": 113981,
+       "uniform3": 55092.2
+      },
+      "200": {
+       "obs4": 319750,
+       "uniform4": 65930.9,
+       "obs3": 228809,
+       "uniform3": 110636.8
+      },
+      "400": {
+       "obs4": 1318040,
+       "uniform4": 258956.6,
+       "obs3": 461258,
+       "uniform3": 219096.6
+      }
+     }
+    },
+    "prehistoric": {
+     "n": 494,
+     "per_100km2": 30.88,
+     "obs": {
+      "3": 67288,
+      "4": 46785,
+      "5": 26148,
+      "6": 11858
+     },
+     "longest": 11,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 22373.3,
+        "lo": 20297.5,
+        "hi": 25308.0,
+        "p": 0.0,
+        "ratio": 3.01
+       },
+       "4": {
+        "mean": 4932.5,
+        "lo": 4165.7,
+        "hi": 6085.2,
+        "p": 0.0,
+        "ratio": 9.48
+       },
+       "5": {
+        "mean": 786.8,
+        "lo": 582.8,
+        "hi": 1138.3,
+        "p": 0.0,
+        "ratio": 33.23
+       },
+       "6": {
+        "mean": 98.8,
+        "lo": 51.0,
+        "hi": 210.2,
+        "p": 0.0,
+        "ratio": 120.0
+       },
+       "longest_mean": 7.37,
+       "longest_share_ge": 0.0
+      },
+      "jitter": {
+       "3": {
+        "mean": 68077.0,
+        "lo": 66241.2,
+        "hi": 70156.1,
+        "p": 0.7766666666666666,
+        "ratio": 0.99
+       },
+       "4": {
+        "mean": 48739.3,
+        "lo": 45057.9,
+        "hi": 53482.1,
+        "p": 0.8033333333333333,
+        "ratio": 0.96
+       },
+       "5": {
+        "mean": 28849.2,
+        "lo": 24021.3,
+        "hi": 34827.0,
+        "p": 0.8333333333333334,
+        "ratio": 0.91
+       },
+       "6": {
+        "mean": 14586.6,
+        "lo": 10780.6,
+        "hi": 20054.0,
+        "p": 0.87,
+        "ratio": 0.81
+       },
+       "longest_mean": 11.92,
+       "longest_share_ge": 0.99
+      },
+      "shuffle": {
+       "3": {
+        "mean": 46283.3,
+        "lo": 42982.0,
+        "hi": 49468.7,
+        "p": 0.0,
+        "ratio": 1.45
+       },
+       "4": {
+        "mean": 23514.0,
+        "lo": 20126.9,
+        "hi": 27143.5,
+        "p": 0.0,
+        "ratio": 1.99
+       },
+       "5": {
+        "mean": 9761.7,
+        "lo": 7588.0,
+        "hi": 12412.3,
+        "p": 0.0,
+        "ratio": 2.68
+       },
+       "6": {
+        "mean": 3346.2,
+        "lo": 2233.7,
+        "hi": 4713.7,
+        "p": 0.0,
+        "ratio": 3.54
+       },
+       "longest_mean": 9.88,
+       "longest_share_ge": 0.14666666666666667
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 11763,
+       "uniform4": 1223.9,
+       "obs3": 33777,
+       "uniform3": 11132.7
+      },
+      "100": {
+       "obs4": 46785,
+       "uniform4": 4932.5,
+       "obs3": 67288,
+       "uniform3": 22373.3
+      },
+      "200": {
+       "obs4": 190387,
+       "uniform4": 19854.1,
+       "obs3": 135113,
+       "uniform3": 45119.6
+      },
+      "400": {
+       "obs4": 782458,
+       "uniform4": 78537.7,
+       "obs3": 272071,
+       "uniform3": 89201.5
+      }
+     }
+    },
+    "churches": {
+     "n": 173,
+     "per_100km2": 10.81,
+     "obs": {
+      "3": 983,
+      "4": 108,
+      "5": 11,
+      "6": 1
+     },
+     "longest": 6,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 935.8,
+        "lo": 765.8,
+        "hi": 1118.1,
+        "p": 0.3,
+        "ratio": 1.05
+       },
+       "4": {
+        "mean": 68.7,
+        "lo": 42.0,
+        "hi": 104.5,
+        "p": 0.023333333333333334,
+        "ratio": 1.57
+       },
+       "5": {
+        "mean": 3.4,
+        "lo": 0.0,
+        "hi": 11.0,
+        "p": 0.03,
+        "ratio": 3.28
+       },
+       "6": {
+        "mean": 0.1,
+        "lo": 0.0,
+        "hi": 1.0,
+        "p": 0.11,
+        "ratio": 6.98
+       },
+       "longest_mean": 5.05,
+       "longest_share_ge": 0.11
+      },
+      "jitter": {
+       "3": {
+        "mean": 986.0,
+        "lo": 887.4,
+        "hi": 1110.5,
+        "p": 0.5,
+        "ratio": 1.0
+       },
+       "4": {
+        "mean": 89.3,
+        "lo": 56.5,
+        "hi": 134.6,
+        "p": 0.15333333333333332,
+        "ratio": 1.21
+       },
+       "5": {
+        "mean": 6.4,
+        "lo": 1.0,
+        "hi": 20.5,
+        "p": 0.14666666666666667,
+        "ratio": 1.71
+       },
+       "6": {
+        "mean": 0.4,
+        "lo": 0.0,
+        "hi": 5.0,
+        "p": 0.2,
+        "ratio": 2.36
+       },
+       "longest_mean": 5.22,
+       "longest_share_ge": 0.2
+      },
+      "shuffle": {
+       "3": {
+        "mean": 1973.3,
+        "lo": 1611.3,
+        "hi": 2475.6,
+        "p": 1.0,
+        "ratio": 0.5
+       },
+       "4": {
+        "mean": 348.1,
+        "lo": 225.0,
+        "hi": 548.6,
+        "p": 1.0,
+        "ratio": 0.31
+       },
+       "5": {
+        "mean": 49.9,
+        "lo": 18.5,
+        "hi": 102.1,
+        "p": 0.9966666666666667,
+        "ratio": 0.22
+       },
+       "6": {
+        "mean": 5.8,
+        "lo": 0.0,
+        "hi": 21.0,
+        "p": 0.9433333333333334,
+        "ratio": 0.17
+       },
+       "longest_mean": 6.23,
+       "longest_share_ge": 0.9433333333333334
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 27,
+       "uniform4": 17.6,
+       "obs3": 484,
+       "uniform3": 465.7
+      },
+      "100": {
+       "obs4": 108,
+       "uniform4": 68.7,
+       "obs3": 983,
+       "uniform3": 935.8
+      },
+      "200": {
+       "obs4": 518,
+       "uniform4": 281.2,
+       "obs3": 2043,
+       "uniform3": 1859.2
+      },
+      "400": {
+       "obs4": 2076,
+       "uniform4": 1151.7,
+       "obs3": 4099,
+       "uniform3": 3803.3
+      }
+     }
+    }
+   }
+  },
+  "cambridge": {
+   "label": "Around Cambridge",
+   "long": "Cambridgeshire, around Cambridge (Watkins's last book)",
+   "land_km2": 1600.0,
+   "maximal_4plus": 977,
+   "maximal_4plus_prehistoric_only": 0,
+   "sim_maximal_4plus": 323,
+   "sets": {
+    "all": {
+     "n": 266,
+     "per_100km2": 16.62,
+     "obs": {
+      "3": 7393,
+      "4": 2178,
+      "5": 535,
+      "6": 94
+     },
+     "longest": 7,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 3468.9,
+        "lo": 3048.0,
+        "hi": 3995.0,
+        "p": 0.0,
+        "ratio": 2.13
+       },
+       "4": {
+        "mean": 404.2,
+        "lo": 295.9,
+        "hi": 536.7,
+        "p": 0.0,
+        "ratio": 5.39
+       },
+       "5": {
+        "mean": 33.5,
+        "lo": 13.0,
+        "hi": 63.0,
+        "p": 0.0,
+        "ratio": 15.96
+       },
+       "6": {
+        "mean": 2.1,
+        "lo": 0.0,
+        "hi": 9.0,
+        "p": 0.0,
+        "ratio": 43.93
+       },
+       "longest_mean": 5.83,
+       "longest_share_ge": 0.08666666666666667
+      },
+      "jitter": {
+       "3": {
+        "mean": 7444.8,
+        "lo": 6924.3,
+        "hi": 8082.3,
+        "p": 0.51,
+        "ratio": 0.99
+       },
+       "4": {
+        "mean": 2222.4,
+        "lo": 1733.2,
+        "hi": 3020.1,
+        "p": 0.5,
+        "ratio": 0.98
+       },
+       "5": {
+        "mean": 595.8,
+        "lo": 329.7,
+        "hi": 1160.7,
+        "p": 0.5433333333333333,
+        "ratio": 0.9
+       },
+       "6": {
+        "mean": 139.1,
+        "lo": 37.9,
+        "hi": 431.1,
+        "p": 0.62,
+        "ratio": 0.68
+       },
+       "longest_mean": 7.81,
+       "longest_share_ge": 0.99
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 518,
+       "uniform4": 101.1,
+       "obs3": 3693,
+       "uniform3": 1737.8
+      },
+      "100": {
+       "obs4": 2178,
+       "uniform4": 404.2,
+       "obs3": 7393,
+       "uniform3": 3468.9
+      },
+      "200": {
+       "obs4": 8816,
+       "uniform4": 1623.2,
+       "obs3": 14785,
+       "uniform3": 6902.9
+      },
+      "400": {
+       "obs4": 37662,
+       "uniform4": 6573.2,
+       "obs3": 30129,
+       "uniform3": 13933.7
+      }
+     }
+    },
+    "prehistoric": {
+     "n": 39,
+     "per_100km2": 2.44,
+     "obs": {
+      "3": 20,
+      "4": 0,
+      "5": 0,
+      "6": 0
+     },
+     "longest": 3,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 10.4,
+        "lo": 4.0,
+        "hi": 21.0,
+        "p": 0.03333333333333333,
+        "ratio": 1.92
+       },
+       "4": {
+        "mean": 0.2,
+        "lo": 0.0,
+        "hi": 1.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "5": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": null
+       },
+       "6": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": null
+       },
+       "longest_mean": 3.14,
+       "longest_share_ge": 1.0
+      },
+      "jitter": {
+       "3": {
+        "mean": 23.4,
+        "lo": 13.0,
+        "hi": 38.0,
+        "p": 0.7033333333333334,
+        "ratio": 0.85
+       },
+       "4": {
+        "mean": 0.8,
+        "lo": 0.0,
+        "hi": 3.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "5": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "6": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": null
+       },
+       "longest_mean": 3.54,
+       "longest_share_ge": 1.0
+      },
+      "shuffle": {
+       "3": {
+        "mean": 21.4,
+        "lo": 7.5,
+        "hi": 43.5,
+        "p": 0.5333333333333333,
+        "ratio": 0.93
+       },
+       "4": {
+        "mean": 0.8,
+        "lo": 0.0,
+        "hi": 4.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "5": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": 0.0
+       },
+       "6": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p": 1.0,
+        "ratio": null
+       },
+       "longest_mean": 3.48,
+       "longest_share_ge": 1.0
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 0,
+       "uniform4": 0.0,
+       "obs3": 12,
+       "uniform3": 4.7
+      },
+      "100": {
+       "obs4": 0,
+       "uniform4": 0.2,
+       "obs3": 20,
+       "uniform3": 10.4
+      },
+      "200": {
+       "obs4": 2,
+       "uniform4": 0.7,
+       "obs3": 54,
+       "uniform3": 20.2
+      },
+      "400": {
+       "obs4": 21,
+       "uniform4": 2.7,
+       "obs3": 100,
+       "uniform3": 41.4
+      }
+     }
+    },
+    "churches": {
+     "n": 226,
+     "per_100km2": 14.12,
+     "obs": {
+      "3": 4937,
+      "4": 1289,
+      "5": 257,
+      "6": 31
+     },
+     "longest": 7,
+     "nulls": {
+      "uniform": {
+       "3": {
+        "mean": 2128.6,
+        "lo": 1788.5,
+        "hi": 2555.3,
+        "p": 0.0,
+        "ratio": 2.32
+       },
+       "4": {
+        "mean": 211.8,
+        "lo": 141.5,
+        "hi": 309.7,
+        "p": 0.0,
+        "ratio": 6.08
+       },
+       "5": {
+        "mean": 15.1,
+        "lo": 5.0,
+        "hi": 33.5,
+        "p": 0.0,
+        "ratio": 17.05
+       },
+       "6": {
+        "mean": 0.7,
+        "lo": 0.0,
+        "hi": 3.5,
+        "p": 0.0,
+        "ratio": 42.08
+       },
+       "longest_mean": 5.44,
+       "longest_share_ge": 0.016666666666666666
+      },
+      "jitter": {
+       "3": {
+        "mean": 4981.7,
+        "lo": 4621.8,
+        "hi": 5395.6,
+        "p": 0.5666666666666667,
+        "ratio": 0.99
+       },
+       "4": {
+        "mean": 1369.6,
+        "lo": 1033.2,
+        "hi": 1849.4,
+        "p": 0.63,
+        "ratio": 0.94
+       },
+       "5": {
+        "mean": 334.7,
+        "lo": 164.4,
+        "hi": 667.1,
+        "p": 0.7466666666666667,
+        "ratio": 0.77
+       },
+       "6": {
+        "mean": 70.9,
+        "lo": 14.0,
+        "hi": 218.3,
+        "p": 0.83,
+        "ratio": 0.44
+       },
+       "longest_mean": 7.42,
+       "longest_share_ge": 0.93
+      },
+      "shuffle": {
+       "3": {
+        "mean": 4504.3,
+        "lo": 3932.8,
+        "hi": 5058.8,
+        "p": 0.08,
+        "ratio": 1.1
+       },
+       "4": {
+        "mean": 1119.1,
+        "lo": 819.0,
+        "hi": 1456.6,
+        "p": 0.16333333333333333,
+        "ratio": 1.15
+       },
+       "5": {
+        "mean": 232.8,
+        "lo": 127.9,
+        "hi": 357.6,
+        "p": 0.35,
+        "ratio": 1.1
+       },
+       "6": {
+        "mean": 35.1,
+        "lo": 11.5,
+        "hi": 65.0,
+        "p": 0.6033333333333334,
+        "ratio": 0.88
+       },
+       "longest_mean": 6.93,
+       "longest_share_ge": 0.9266666666666666
+      }
+     },
+     "by_width": {
+      "50": {
+       "obs4": 290,
+       "uniform4": 51.8,
+       "obs3": 2424,
+       "uniform3": 1059.7
+      },
+      "100": {
+       "obs4": 1289,
+       "uniform4": 211.8,
+       "obs3": 4937,
+       "uniform3": 2128.6
+      },
+      "200": {
+       "obs4": 5345,
+       "uniform4": 835.8,
+       "obs3": 9918,
+       "uniform3": 4231.1
+      },
+      "400": {
+       "obs4": 23199,
+       "uniform4": 3403.3,
+       "obs3": 20265,
+       "uniform3": 8492.1
+      }
+     }
+    }
+   }
+  }
+ },
+ "curve": {
+  "rows": [
+   {
+    "width_m": 50.0,
+    "n_points": 25.0,
+    "density_per_100km2": 1.562,
+    "expected_3": 1.289,
+    "expected_4": 0.006,
+    "expected_5": 0.0
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 50.0,
+    "density_per_100km2": 3.125,
+    "expected_3": 10.981,
+    "expected_4": 0.115,
+    "expected_5": 0.001
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 75.0,
+    "density_per_100km2": 4.688,
+    "expected_3": 37.83,
+    "expected_4": 0.609,
+    "expected_5": 0.007
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 100.0,
+    "density_per_100km2": 6.25,
+    "expected_3": 90.59,
+    "expected_4": 1.964,
+    "expected_5": 0.03
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 150.0,
+    "density_per_100km2": 9.375,
+    "expected_3": 308.857,
+    "expected_4": 10.146,
+    "expected_5": 0.239
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 200.0,
+    "density_per_100km2": 12.5,
+    "expected_3": 735.811,
+    "expected_4": 32.393,
+    "expected_5": 1.024
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 300.0,
+    "density_per_100km2": 18.75,
+    "expected_3": 2495.899,
+    "expected_4": 165.654,
+    "expected_5": 7.911
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 400.0,
+    "density_per_100km2": 25.0,
+    "expected_3": 5931.086,
+    "expected_4": 526.191,
+    "expected_5": 33.62
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 500.0,
+    "density_per_100km2": 31.25,
+    "expected_3": 11601.606,
+    "expected_4": 1288.526,
+    "expected_5": 103.117
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 600.0,
+    "density_per_100km2": 37.5,
+    "expected_3": 20067.695,
+    "expected_4": 2677.259,
+    "expected_5": 257.45
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 800.0,
+    "density_per_100km2": 50.0,
+    "expected_3": 47627.512,
+    "expected_4": 8482.713,
+    "expected_5": 1089.441
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 1000.0,
+    "density_per_100km2": 62.5,
+    "expected_3": 93092.408,
+    "expected_4": 20740.919,
+    "expected_5": 3333.062
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 1200.0,
+    "density_per_100km2": 75.0,
+    "expected_3": 160944.257,
+    "expected_4": 43051.492,
+    "expected_5": 8307.596
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 1500.0,
+    "density_per_100km2": 93.75,
+    "expected_3": 314501.66,
+    "expected_4": 105211.524,
+    "expected_5": 25395.157
+   },
+   {
+    "width_m": 50.0,
+    "n_points": 2000.0,
+    "density_per_100km2": 125.0,
+    "expected_3": 745858.615,
+    "expected_4": 332853.512,
+    "expected_5": 107193.803
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 25.0,
+    "density_per_100km2": 1.562,
+    "expected_3": 2.577,
+    "expected_4": 0.025,
+    "expected_5": 0.0
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 50.0,
+    "density_per_100km2": 3.125,
+    "expected_3": 21.961,
+    "expected_4": 0.461,
+    "expected_5": 0.007
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 75.0,
+    "density_per_100km2": 4.688,
+    "expected_3": 75.66,
+    "expected_4": 2.435,
+    "expected_5": 0.056
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 100.0,
+    "density_per_100km2": 6.25,
+    "expected_3": 181.18,
+    "expected_4": 7.855,
+    "expected_5": 0.243
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 150.0,
+    "density_per_100km2": 9.375,
+    "expected_3": 617.714,
+    "expected_4": 40.584,
+    "expected_5": 1.912
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 200.0,
+    "density_per_100km2": 12.5,
+    "expected_3": 1471.623,
+    "expected_4": 129.572,
+    "expected_5": 8.195
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 300.0,
+    "density_per_100km2": 18.75,
+    "expected_3": 4991.797,
+    "expected_4": 662.616,
+    "expected_5": 63.291
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 400.0,
+    "density_per_100km2": 25.0,
+    "expected_3": 11862.171,
+    "expected_4": 2104.763,
+    "expected_5": 268.958
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 500.0,
+    "density_per_100km2": 31.25,
+    "expected_3": 23203.213,
+    "expected_4": 5154.103,
+    "expected_5": 824.937
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 600.0,
+    "density_per_100km2": 37.5,
+    "expected_3": 40135.39,
+    "expected_4": 10709.036,
+    "expected_5": 2059.599
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 800.0,
+    "density_per_100km2": 50.0,
+    "expected_3": 95255.024,
+    "expected_4": 33930.853,
+    "expected_5": 8715.531
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 1000.0,
+    "density_per_100km2": 62.5,
+    "expected_3": 186184.817,
+    "expected_4": 82963.675,
+    "expected_5": 26664.492
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 1200.0,
+    "density_per_100km2": 75.0,
+    "expected_3": 321888.514,
+    "expected_4": 172205.966,
+    "expected_5": 66460.77
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 1500.0,
+    "density_per_100km2": 93.75,
+    "expected_3": 629003.32,
+    "expected_4": 420846.095,
+    "expected_5": 203161.256
+   },
+   {
+    "width_m": 100.0,
+    "n_points": 2000.0,
+    "density_per_100km2": 125.0,
+    "expected_3": 1491717.23,
+    "expected_4": 1331414.048,
+    "expected_5": 857550.424
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 25.0,
+    "density_per_100km2": 1.562,
+    "expected_3": 5.154,
+    "expected_4": 0.101,
+    "expected_5": 0.001
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 50.0,
+    "density_per_100km2": 3.125,
+    "expected_3": 43.922,
+    "expected_4": 1.845,
+    "expected_5": 0.055
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 75.0,
+    "density_per_100km2": 4.688,
+    "expected_3": 151.319,
+    "expected_4": 9.739,
+    "expected_5": 0.446
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 100.0,
+    "density_per_100km2": 6.25,
+    "expected_3": 362.359,
+    "expected_4": 31.419,
+    "expected_5": 1.947
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 150.0,
+    "density_per_100km2": 9.375,
+    "expected_3": 1235.428,
+    "expected_4": 162.335,
+    "expected_5": 15.296
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 200.0,
+    "density_per_100km2": 12.5,
+    "expected_3": 2943.246,
+    "expected_4": 518.288,
+    "expected_5": 65.561
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 300.0,
+    "density_per_100km2": 18.75,
+    "expected_3": 9983.595,
+    "expected_4": 2650.464,
+    "expected_5": 506.325
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 400.0,
+    "density_per_100km2": 25.0,
+    "expected_3": 23724.343,
+    "expected_4": 8419.053,
+    "expected_5": 2151.664
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 500.0,
+    "density_per_100km2": 31.25,
+    "expected_3": 46406.426,
+    "expected_4": 20616.411,
+    "expected_5": 6599.495
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 600.0,
+    "density_per_100km2": 37.5,
+    "expected_3": 80270.78,
+    "expected_4": 42836.145,
+    "expected_5": 16476.791
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 800.0,
+    "density_per_100km2": 50.0,
+    "expected_3": 190510.048,
+    "expected_4": 135723.411,
+    "expected_5": 69724.246
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 1000.0,
+    "density_per_100km2": 62.5,
+    "expected_3": 372369.634,
+    "expected_4": 331854.702,
+    "expected_5": 213315.937
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 1200.0,
+    "density_per_100km2": 75.0,
+    "expected_3": 643777.027,
+    "expected_4": 688823.865,
+    "expected_5": 531686.159
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 1500.0,
+    "density_per_100km2": 93.75,
+    "expected_3": 1258006.639,
+    "expected_4": 1683384.381,
+    "expected_5": 1625290.05
+   },
+   {
+    "width_m": 200.0,
+    "n_points": 2000.0,
+    "density_per_100km2": 125.0,
+    "expected_3": 2983434.459,
+    "expected_4": 5325656.191,
+    "expected_5": 6860403.392
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 25.0,
+    "density_per_100km2": 1.562,
+    "expected_3": 10.308,
+    "expected_4": 0.405,
+    "expected_5": 0.011
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 50.0,
+    "density_per_100km2": 3.125,
+    "expected_3": 87.845,
+    "expected_4": 7.381,
+    "expected_5": 0.438
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 75.0,
+    "density_per_100km2": 4.688,
+    "expected_3": 302.638,
+    "expected_4": 38.955,
+    "expected_5": 3.57
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 100.0,
+    "density_per_100km2": 6.25,
+    "expected_3": 724.719,
+    "expected_4": 125.675,
+    "expected_5": 15.573
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 150.0,
+    "density_per_100km2": 9.375,
+    "expected_3": 2470.856,
+    "expected_4": 649.342,
+    "expected_5": 122.369
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 200.0,
+    "density_per_100km2": 12.5,
+    "expected_3": 5886.491,
+    "expected_4": 2073.153,
+    "expected_5": 524.485
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 300.0,
+    "density_per_100km2": 18.75,
+    "expected_3": 19967.189,
+    "expected_4": 10601.857,
+    "expected_5": 4050.603
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 400.0,
+    "density_per_100km2": 25.0,
+    "expected_3": 47448.685,
+    "expected_4": 33676.213,
+    "expected_5": 17213.311
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 500.0,
+    "density_per_100km2": 31.25,
+    "expected_3": 92812.852,
+    "expected_4": 82465.645,
+    "expected_5": 52795.964
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 600.0,
+    "density_per_100km2": 37.5,
+    "expected_3": 160541.561,
+    "expected_4": 171344.578,
+    "expected_5": 131814.326
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 800.0,
+    "density_per_100km2": 50.0,
+    "expected_3": 381020.095,
+    "expected_4": 542893.645,
+    "expected_5": 557793.965
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 1000.0,
+    "density_per_100km2": 62.5,
+    "expected_3": 744739.267,
+    "expected_4": 1327418.808,
+    "expected_5": 1706527.498
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 1200.0,
+    "density_per_100km2": 75.0,
+    "expected_3": 1287554.055,
+    "expected_4": 2755295.46,
+    "expected_5": 4253489.272
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 1500.0,
+    "density_per_100km2": 93.75,
+    "expected_3": 2516013.279,
+    "expected_4": 6733537.523,
+    "expected_5": 13002320.4
+   },
+   {
+    "width_m": 400.0,
+    "n_points": 2000.0,
+    "density_per_100km2": 125.0,
+    "expected_3": 5966868.919,
+    "expected_4": 21302624.763,
+    "expected_5": 54883227.135
+   }
+  ],
+  "check": [
+   {
+    "n": 100,
+    "sim_mean_4": 8.075,
+    "formula_4": 7.854703589840124,
+    "sim_mean_3": 179.5,
+    "formula_3": 181.17968596870028
+   },
+   {
+    "n": 200,
+    "sim_mean_4": 131.225,
+    "formula_4": 129.57203653797703,
+    "sim_mean_3": 1457.725,
+    "formula_3": 1471.6227554192392
+   },
+   {
+    "n": 400,
+    "sim_mean_4": 2105.775,
+    "formula_4": 2104.763298336171,
+    "sim_mean_3": 11902.775,
+    "formula_3": 11862.171301258108
+   }
+  ]
+ },
+ "michael": {
+  "anchor_a": "St Michael's Mount",
+  "anchor_b": "St Michael's Church, Glastonbury Tor",
+  "bearing_deg": 61.4,
+  "length_km": 572.3,
+  "land_km": 570.5,
+  "east_end": {
+   "lat": 52.57015,
+   "lon": 1.74858,
+   "nearest_place": "Gorleston-on-Sea",
+   "nearest_type": "Town",
+   "nearest_km": 1.1,
+   "area": "Norfolk"
+  },
+  "named": [
+   {
+    "name": "St Michael's Mount",
+    "off_m": 0,
+    "along_km": 0.0
+   },
+   {
+    "name": "St Michael de Rupe, Brentor",
+    "off_m": 1311,
+    "along_km": 108.1
+   },
+   {
+    "name": "Creech St Michael",
+    "off_m": 242,
+    "along_km": 200.3
+   },
+   {
+    "name": "Burrow Mump church",
+    "off_m": 230,
+    "along_km": 210.1
+   },
+   {
+    "name": "St Michael's Church, Glastonbury Tor",
+    "off_m": 0,
+    "along_km": 227.4
+   }
+  ],
+  "real_1km": {
+   "all": 393,
+   "prehistoric": 193,
+   "churches": 201,
+   "michael": 16,
+   "stone_circle": 5,
+   "megalith": 14,
+   "barrow": 166,
+   "hillfort": 8,
+   "holy_well": 1
+  },
+  "real_1km_incl_anchors": {
+   "all": 398,
+   "prehistoric": 194,
+   "churches": 205,
+   "michael": 17,
+   "stone_circle": 5,
+   "megalith": 15,
+   "barrow": 166,
+   "hillfort": 8,
+   "holy_well": 1
+  },
+  "real_100m": {
+   "all": 25,
+   "prehistoric": 8,
+   "churches": 17,
+   "michael": 2,
+   "stone_circle": 0,
+   "megalith": 1,
+   "barrow": 7,
+   "hillfort": 0,
+   "holy_well": 0
+  },
+  "comp": {
+   "1km_all": {
+    "real": 393,
+    "real_per100": 68.89,
+    "null_mean_per100": 60.3,
+    "null_lo": 36.86,
+    "null_hi": 107.11,
+    "share_null_ge": 0.258,
+    "pct_rank": 74.2,
+    "expected_on_real_length": 344.0
+   },
+   "1km_prehistoric": {
+    "real": 193,
+    "real_per100": 33.83,
+    "null_mean_per100": 15.77,
+    "null_lo": 5.18,
+    "null_hi": 42.8,
+    "share_null_ge": 0.056,
+    "pct_rank": 94.4,
+    "expected_on_real_length": 90.0
+   },
+   "1km_churches": {
+    "real": 201,
+    "real_per100": 35.23,
+    "null_mean_per100": 44.22,
+    "null_lo": 26.26,
+    "null_hi": 88.67,
+    "share_null_ge": 0.6445,
+    "pct_rank": 35.5,
+    "expected_on_real_length": 252.3
+   },
+   "1km_michael": {
+    "real": 16,
+    "real_per100": 2.8,
+    "null_mean_per100": 1.61,
+    "null_lo": 0.51,
+    "null_hi": 3.3,
+    "share_null_ge": 0.067,
+    "pct_rank": 93.3,
+    "expected_on_real_length": 9.2
+   },
+   "1km_barrow": {
+    "real": 166,
+    "real_per100": 29.1,
+    "null_mean_per100": 12.75,
+    "null_lo": 2.81,
+    "null_hi": 40.02,
+    "share_null_ge": 0.0605,
+    "pct_rank": 94.0,
+    "expected_on_real_length": 72.7
+   },
+   "1km_hillfort": {
+    "real": 8,
+    "real_per100": 1.4,
+    "null_mean_per100": 2.19,
+    "null_lo": 0.6,
+    "null_hi": 4.08,
+    "share_null_ge": 0.8155,
+    "pct_rank": 18.4,
+    "expected_on_real_length": 12.5
+   },
+   "1km_stone_circle": {
+    "real": 5,
+    "real_per100": 0.88,
+    "null_mean_per100": 0.29,
+    "null_lo": 0.0,
+    "null_hi": 1.26,
+    "share_null_ge": 0.088,
+    "pct_rank": 91.2,
+    "expected_on_real_length": 1.6
+   },
+   "1km_megalith": {
+    "real": 14,
+    "real_per100": 2.45,
+    "null_mean_per100": 0.54,
+    "null_lo": 0.0,
+    "null_hi": 2.47,
+    "share_null_ge": 0.026,
+    "pct_rank": 97.4,
+    "expected_on_real_length": 3.1
+   },
+   "1km_holy_well": {
+    "real": 1,
+    "real_per100": 0.18,
+    "null_mean_per100": 0.41,
+    "null_lo": 0.0,
+    "null_hi": 1.26,
+    "share_null_ge": 0.7365,
+    "pct_rank": 26.4,
+    "expected_on_real_length": 2.3
+   },
+   "100m_all": {
+    "real": 25,
+    "real_per100": 4.38,
+    "null_mean_per100": 6.09,
+    "null_lo": 2.81,
+    "null_hi": 11.67,
+    "share_null_ge": 0.7555,
+    "pct_rank": 24.4,
+    "expected_on_real_length": 34.7
+   },
+   "100m_prehistoric": {
+    "real": 8,
+    "real_per100": 1.4,
+    "null_mean_per100": 1.6,
+    "null_lo": 0.21,
+    "null_hi": 4.88,
+    "share_null_ge": 0.463,
+    "pct_rank": 53.7,
+    "expected_on_real_length": 9.1
+   },
+   "100m_churches": {
+    "real": 17,
+    "real_per100": 2.98,
+    "null_mean_per100": 4.46,
+    "null_lo": 1.73,
+    "null_hi": 9.75,
+    "share_null_ge": 0.7665,
+    "pct_rank": 23.4,
+    "expected_on_real_length": 25.4
+   },
+   "100m_michael": {
+    "real": 2,
+    "real_per100": 0.35,
+    "null_mean_per100": 0.16,
+    "null_lo": 0.0,
+    "null_hi": 0.67,
+    "share_null_ge": 0.1355,
+    "pct_rank": 86.5,
+    "expected_on_real_length": 0.9
+   },
+   "100m_barrow": {
+    "real": 7,
+    "real_per100": 1.23,
+    "null_mean_per100": 1.3,
+    "null_lo": 0.0,
+    "null_hi": 4.47,
+    "share_null_ge": 0.405,
+    "pct_rank": 59.5,
+    "expected_on_real_length": 7.4
+   },
+   "100m_hillfort": {
+    "real": 0,
+    "real_per100": 0.0,
+    "null_mean_per100": 0.22,
+    "null_lo": 0.0,
+    "null_hi": 0.79,
+    "share_null_ge": 1.0,
+    "pct_rank": 0.0,
+    "expected_on_real_length": 1.3
+   },
+   "100m_stone_circle": {
+    "real": 0,
+    "real_per100": 0.0,
+    "null_mean_per100": 0.03,
+    "null_lo": 0.0,
+    "null_hi": 0.27,
+    "share_null_ge": 1.0,
+    "pct_rank": 0.0,
+    "expected_on_real_length": 0.2
+   },
+   "100m_megalith": {
+    "real": 1,
+    "real_per100": 0.18,
+    "null_mean_per100": 0.05,
+    "null_lo": 0.0,
+    "null_hi": 0.45,
+    "share_null_ge": 0.1685,
+    "pct_rank": 83.2,
+    "expected_on_real_length": 0.3
+   },
+   "100m_holy_well": {
+    "real": 0,
+    "real_per100": 0.0,
+    "null_mean_per100": 0.04,
+    "null_lo": 0.0,
+    "null_hi": 0.32,
+    "share_null_ge": 1.0,
+    "pct_rank": 0.0,
+    "expected_on_real_length": 0.2
+   }
+  },
+  "nlines": 2000,
+  "michael_churches_gb": 1081,
+  "sites_gb": 50822
+ },
+ "piper": {
+  "length_km": 24.9,
+  "named": [
+   {
+    "name": "Pen Twyn camp, southern end of Hatterrall Hill",
+    "off_m": 763,
+    "along_km": 4.8
+   },
+   {
+    "name": "Hatterrall Hill",
+    "off_m": 1908,
+    "along_km": 7.5
+   },
+   {
+    "name": "Oldcastle",
+    "off_m": 310,
+    "along_km": 6.4
+   },
+   {
+    "name": "Longtown Castle",
+    "off_m": 498,
+    "along_km": 11.0
+   },
+   {
+    "name": "Urishay Castle",
+    "off_m": 143,
+    "along_km": 19.3
+   },
+   {
+    "name": "Snodhill Castle",
+    "off_m": 215,
+    "along_km": 22.1
+   }
+  ],
+  "max_off_m": 1908,
+  "sites_within_50m": 1,
+  "null_mean": 1.0,
+  "null_share_ge": 0.517,
+  "null_max": 11,
+  "names_within_50m": [
+   "Church of St Clodock"
+  ],
+  "min_off_m": 143
+ },
+ "random_lines": {
+  "herefordshire": {
+   "length_km": 20.0,
+   "mean": 0.41,
+   "share_ge2": 0.065,
+   "share_ge3": 0.012,
+   "share_ge4": 0.002,
+   "max": 4,
+   "pre_mean": 0.05,
+   "pre_share_ge3": 0.0,
+   "hist": [
+    673,
+    262,
+    53,
+    10,
+    2,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penwith": {
+   "length_km": 15.0,
+   "mean": 0.62,
+   "share_ge2": 0.132,
+   "share_ge3": 0.039,
+   "share_ge4": 0.016,
+   "max": 5,
+   "pre_mean": 0.35,
+   "pre_share_ge3": 0.016,
+   "hist": [
+    565,
+    303,
+    93,
+    23,
+    13,
+    3,
+    0,
+    0,
+    0
+   ]
+  },
+  "wiltshire": {
+   "length_km": 20.0,
+   "mean": 1.69,
+   "share_ge2": 0.353,
+   "share_ge3": 0.21,
+   "share_ge4": 0.137,
+   "max": 19,
+   "pre_mean": 1.46,
+   "pre_share_ge3": 0.188,
+   "hist": [
+    358,
+    289,
+    143,
+    73,
+    37,
+    26,
+    22,
+    15,
+    37
+   ]
+  },
+  "cambridge": {
+   "length_km": 20.0,
+   "mean": 0.42,
+   "share_ge2": 0.075,
+   "share_ge3": 0.02,
+   "share_ge4": 0.007,
+   "max": 5,
+   "pre_mean": 0.06,
+   "pre_share_ge3": 0.0,
+   "hist": [
+    679,
+    246,
+    55,
+    13,
+    5,
+    2,
+    0,
+    0,
+    0
+   ]
+  },
+  "gb": {
+   "length_km": 20.0,
+   "mean": 0.38,
+   "share_ge2": 0.069,
+   "share_ge3": 0.021,
+   "share_ge4": 0.009,
+   "max": 11,
+   "pre_mean": 0.11,
+   "pre_share_ge3": 0.003,
+   "hist": [
+    738,
+    193,
+    48,
+    12,
+    4,
+    2,
+    1,
+    0,
+    2
+   ]
+  }
+ },
+ "examples": {
+  "herefordshire": {
+   "n_places": 7,
+   "length_km": 18.75,
+   "names": [
+    "Church of St George",
+    "Church of the Holy Rood",
+    "Holy Trinity Church",
+    "Eignbrook United Reformed Church",
+    "Price's Almshouses And Chapel",
+    "St Giles' Chapel (Off St Giles Hospital)",
+    "Lady Southampton's Chapel And Adjoining "
+   ],
+   "types": [
+    "church",
+    "church",
+    "church",
+    "church",
+    "church",
+    "church",
+    "church"
+   ],
+   "n_churches": 7
+  },
+  "penwith": {
+   "n_places": 8,
+   "length_km": 18.75,
+   "names": [
+    "Ballowall Barrow",
+    "Ch\u00fbn Quoit",
+    "M\u00ean Scryfa",
+    "Bowl barrow 260m SSE of Zennor Quoit",
+    "Three round barrows 650yds (595m) N of N",
+    "Round barrow 600yds (550m) NW of Nine Ma",
+    "Three bowl barrows on Treen Common 430m ",
+    "St Ia's Church, St Ives"
+   ],
+   "types": [
+    "barrow",
+    "megalith",
+    "megalith",
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow",
+    "church"
+   ],
+   "n_churches": 1
+  },
+  "wiltshire": {
+   "n_places": 11,
+   "length_km": 19.31,
+   "names": [
+    "Barrow SSW of Melsome's Field barn",
+    "Bowl barrow 140m north of the A303 on Co",
+    "barrow",
+    "Bell barrow 550m east of New Barn, Earl'",
+    "barrow",
+    "Ring Barrow",
+    "Bowl barrow 300m WSW of Stonehenge, form",
+    "Bowl barrow 150m east of Stonehenge Cott",
+    "Bowl barrow on the Amesbury/Bulford Boun",
+    "Bowl barrow 300m south west of New King ",
+    "Bowl barrow in Windy Dido, 250m west of "
+   ],
+   "types": [
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow",
+    "barrow"
+   ],
+   "n_churches": 0
+  },
+  "cambridge": {
+   "n_places": 7,
+   "length_km": 19.35,
+   "names": [
+    "Parish Church of St Peter",
+    "St Michael's Church, Longstanton",
+    "All Saints Church",
+    "United Reformed Church, Cherry Hinton Ro",
+    "Church of St Luke",
+    "St James",
+    "Church of All Saints"
+   ],
+   "types": [
+    "church",
+    "holy_well",
+    "church",
+    "church",
+    "church",
+    "church",
+    "church"
+   ],
+   "n_churches": 6
+  }
+ },
+ "headline": {
+  "sites": 50822,
+  "places": 41920,
+  "churches": 35298,
+  "prehistoric": 15239,
+  "hf_obs4": 759,
+  "hf_unif4": 493.8,
+  "hf_jit4": 721.4,
+  "hf_jit4_lo": 576.9,
+  "hf_jit4_hi": 951.5,
+  "hf_unif4_lo": 367.9,
+  "hf_unif4_hi": 689.1,
+  "regions_inside_jitter": 4,
+  "regions_above_uniform": 4,
+  "unif_ratio_min": 1.54,
+  "unif_ratio_max": 5.39,
+  "jit_ratio_min": 0.94,
+  "jit_ratio_max": 1.14,
+  "curve_n100_w100_e4": 7.855,
+  "curve_n200_w100_e4": 129.572,
+  "curve_n400_w100_e4": 2104.763,
+  "curve_n200_w200_e4": 518.288,
+  "curve_double_n": 16.2439647454697,
+  "curve_double_w": 4.0,
+  "curve_n200_w100_e3": 1471.623,
+  "curve_n200_w100_e5": 8.195,
+  "mich_all_1km": 393,
+  "mich_all_1km_pct": 74.2,
+  "mich_all_1km_exp": 344.0,
+  "mich_pre_1km": 193,
+  "mich_pre_1km_pct": 94.4,
+  "mich_pre_1km_exp": 90.0,
+  "mich_mich_1km": 16,
+  "mich_mich_1km_pct": 93.3,
+  "mich_mich_1km_exp": 9.2,
+  "mich_all_100m": 25,
+  "mich_all_100m_pct": 24.4,
+  "mich_all_100m_exp": 34.7,
+  "mich_ch_1km": 201,
+  "mich_ch_1km_pct": 35.5,
+  "mich_ch_1km_exp": 252.3,
+  "rl_gb_mean": 0.38,
+  "rl_gb_ge3": 0.021,
+  "rl_wilts_ge3": 0.21,
+  "rl_hf_ge3": 0.012,
+  "pen_pre_obs4": 103,
+  "pen_pre_uniform4": 19.2,
+  "pen_pre_uniform4_p": 0.0,
+  "pen_pre_jitter4": 76.1,
+  "pen_pre_jitter4_p": 0.13666666666666666,
+  "pen_pre_shuffle4": 35.5,
+  "pen_pre_shuffle4_p": 0.0033333333333333335,
+  "church_dec_le2": 152,
+  "church_dec_3": 1378,
+  "above_uniform_all_widths": 1,
+  "unif_p_max_all4": 0.006666666666666667,
+  "unif_matches_max_all4": 2,
+  "jit_tests": 43,
+  "jit_p_min": 0.04666666666666667,
+  "jit_p_min_where": [
+   "herefordshire",
+   "churches",
+   "5"
+  ],
+  "jit_tests_below05": 1,
+  "jit_all_p_min": 0.07333333333333333
+ }
+}

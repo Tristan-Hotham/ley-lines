@@ -1,0 +1,408 @@
+line,site_id,cat,name,lat,lon,offset_m,along_km,anchor,michael
+michael,S01309,church,"Church of All Saints, Trull",50.9938,-3.1181,260,193.61,0,0
+michael,S01556,church,"St Andrew's Church, Mells",51.242,-2.39118,943,251.49,0,0
+michael,S01561,church,Church of St George,51.0207,-3.05117,40,199.17,0,0
+michael,S01592,church,"Church of St John the Baptist, Glastonbury",51.1482,-2.7162,944,226.57,0,0
+michael,S01612,church,"St Mary's Church, Redgrave",52.363314,1.019751,916,517.7,0,0
+michael,S01674,church,Church of All Saints,52.3969,1.18487,676,529.45,0,0
+michael,S01691,church,"Church of St Bartholomew, Lyng",51.0553,-2.9537,44,207.01,0,0
+michael,S01812,church,"St Mary's Church, Hitchin",51.948,-0.277291,492,417.64,0,0
+michael,S01959,church,"Church of St Peter and St Paul, Shepton Mallet",51.191,-2.5457,685,239.3,0,0
+michael,S01997,church,"St Michael and All Angels Church, Aston Clinton",51.7993,-0.726262,958,382.58,0,1
+michael,S02244,church,"Church of St Michael, Buckland Dinham",51.26,-2.35249,493,254.82,0,1
+michael,S02246,church,"Church of St Michael, Creech St Michael",51.0224,-3.0354,338,200.22,0,1
+michael,S02539,church,"Church of St Michael, Othery",51.08057,-2.88293,70,212.71,0,1
+michael,S02615,church,"Church of the Holy Trinity, Street",51.13149,-2.73261,120,224.66,0,0
+michael,S02952,church,St Benedict's Church,51.1466,-2.71961,905,226.27,0,0
+michael,S03069,church,Church of St Mary,52.3363,0.991087,920,514.62,0,0
+michael,S03105,church,"Church of St Mary, West Buckland",50.9778,-3.1789,289,189.02,0,0
+michael,S03413,church,Parish Church of St Constantine,50.5915,-4.25156,739,102.03,0,0
+michael,S03970,church,Church of St Mary the Virgin,50.8207,-3.59613,382,154.87,0,0
+michael,S03983,church,Church of St Michael and All Angels,50.8337,-3.54796,813,158.53,0,1
+michael,S03992,church,Church of St Andrew,50.7448,-3.79621,673,138.43,0,0
+michael,S04330,church,Church of St Nicholas,52.2422,0.633876,513,488.13,0,0
+michael,S04453,church,Church of St Mary the Virgin,52.3677,1.05903,174,520.32,0,0
+michael,S04548,church,Church of St Stephen,50.3439,-4.88959,46,49.02,0,0
+michael,S04595,church,Church of Holy Trinity,52.1332,0.318526,671,463.42,0,0
+michael,S04973,church,"St John's Church, Duxford",52.0944,0.1563,487,451.55,0,0
+michael,S05106,church,Parish Church of Holy Trinity,52.1162,0.25555,418,458.71,0,0
+michael,S05132,church,Parish Church of St Peter,52.0924,0.159819,179,451.67,0,0
+michael,S05148,church,"St Ladoca's Church, Ladock",50.3211,-4.95905,402,43.47,0,0
+michael,S05153,church,Church of St Melor,50.5376,-4.37281,93,91.59,0,0
+michael,S05165,church,"Church of St. Mary the Virgin, Baldock",51.9897,-0.18979,889,425.11,0,0
+michael,S05277,church,"St Andrew's Church, Frenze",52.3802,1.1361,887,525.65,0,0
+michael,S05464,church,Church of St Blaise,51.6285,-1.3002,727,338.65,0,0
+michael,S05477,church,Church of St Andrew,51.5759,-1.45269,537,326.57,0,0
+michael,S05554,church,"St George's Church, Shimpling",52.3993,1.168,68,528.53,0,0
+michael,S05712,church,Church of St Michael,52.4927,1.51579,920,554.35,0,1
+michael,S05722,church,"Church of St Mary, Ditchingham",52.4782,1.42941,183,548.36,0,0
+michael,S05746,church,Church of All Saints,52.4938,1.49531,205,553.15,0,0
+michael,S05753,church,Church of St Mary,52.5153,1.59372,954,560.21,0,0
+michael,S05773,church,Church of St Petrock,50.6432,-4.11,660,113.58,0,0
+michael,S05787,church,Church of St Matthias,52.5262,1.58969,258,560.49,0,0
+michael,S06021,church,"Church of St Mary Magdalene, Offley",51.9281,-0.335721,622,413.06,0,0
+michael,S06077,church,Church of St James,51.4286,-1.85789,555,294.04,0,0
+michael,S06180,church,Church of St Mary,51.6425,-1.20877,867,344.96,0,0
+michael,S06366,church,Church of St Michael,52.486,1.45475,214,550.29,0,1
+michael,S06519,church,"Parish Church of St James, Trowbridge",51.3215,-2.20743,631,266.98,0,0
+michael,S06571,church,Church of St Mary,52.3773,1.1092,371,523.86,0,0
+michael,S06580,church,Church of St Mary,52.4207,1.25209,303,534.72,0,0
+michael,S06583,church,"Church of St Remigius, Roydon",52.3813,1.07838,953,522.17,0,0
+michael,S06637,church,Church of St Mary,51.8362,-0.629107,413,390.42,0,0
+michael,S06640,church,Church of St Mary the Virgin,51.8617,-0.592737,947,393.95,0,0
+michael,S06642,church,"Church of St Mary, Ixworth",52.2977,0.830987,60,502.93,0,0
+michael,S06666,church,Church of St Peter,52.2072,0.53893,75,480.59,0,0
+michael,S06759,church,"Holy Trinity Church, Trowbridge",51.3188,-2.2147,611,266.39,0,0
+michael,S06853,church,"All Saints Parish Church, Kirtling",52.191,0.466383,533,475.34,0,0
+michael,S06892,church,Carharrack Methodist Church,50.2293,-5.18341,137,24.5,0,0
+michael,S07087,holy_well,Church of St Keyne,50.27226,-5.061255,523,34.43,0,0
+michael,S07333,church,Bickleigh Castle Chapel Including Walls To Enclosure To South And West,50.8509,-3.51151,426,161.71,0,0
+michael,S07392,church,"Church of St Andrew, Thelveton",52.3869,1.16135,973,527.52,0,0
+michael,S07486,church,"Church of St Edmund, Fritton",52.5429,1.64608,274,564.75,0,0
+michael,S07497,church,Church of the Holy Saviour,51.9525,-0.268779,314,418.39,0,0
+michael,S07789,church,Church of St Ciricius and St Julitta,50.3901,-4.74178,912,60.69,0,0
+michael,S07842,church,Church of St Mary,50.8545,-3.50404,339,162.37,0,0
+michael,S07891,church,Church of St Edmund,52.2175,0.584784,450,483.9,0,0
+michael,S07895,church,"Church of St Martin, Fornham St Martin",52.2696,0.713291,827,494.35,0,0
+michael,S07904,church,Church of St Mary,52.2486,0.670166,45,490.67,0,0
+michael,S07942,church,Church of St Mary,52.2266,0.569384,926,483.41,0,0
+michael,S08009,church,Parish Church of St Mary,52.1677,0.381181,831,468.97,0,0
+michael,S08302,church,Church of St Margaret,52.329,0.948801,375,511.68,0,0
+michael,S08550,church,Church of St Michael,51.5619,-1.46219,526,325.26,0,1
+michael,S08576,church,Parish Church of St Mary,52.1169,0.234185,312,457.44,0,0
+michael,S08622,church,"Church of St Andrew, Raveningham",52.5127,1.53243,593,556.34,0,0
+michael,S08677,church,Church of St Mary,52.153,0.360968,9,467.0,0,0
+michael,S08683,church,Church of St Andrew,52.1461,0.345824,229,465.73,0,0
+michael,S08726,church,"St George's Roman Catholic Church, Taunton",51.0128,-3.09846,903,195.85,0,0
+michael,S08928,church,Parish Church of St Mary the Virgin,52.1199,0.232583,659,457.5,0,0
+michael,S09173,church,Church of St Michael and All Angels,51.6198,-1.3306,862,336.33,0,1
+michael,S09418,church,Church of All Saints,51.8036,-0.713681,935,383.57,0,0
+michael,S09426,church,Church of All Saints,51.8225,-0.666698,568,387.42,0,0
+michael,S09476,church,Church of St Peter,51.9246,-0.375129,274,410.47,0,0
+michael,S09509,church,Taunton Unitarian Chapel,51.0122,-3.10215,972,195.59,0,0
+michael,S09514,church,St George's Church,51.0093,-3.10647,840,195.17,0,0
+michael,S09549,church,"St Hilary Church, Cornwall",50.1311,-5.4288,434,3.85,0,0
+michael,S09812,church,Church of St Andrew,51.3949,-2.00242,950,283.42,0,0
+michael,S10030,church,Church of St Andrew,52.2345,0.617643,240,486.76,0,0
+michael,S10185,church,St Michael's Church,50.2465,-5.12627,596,28.98,0,1
+michael,S10531,church,Church of St Michael and All Angels,51.6559,-1.21036,501,345.57,0,1
+michael,S10544,church,Church of the Holy Trinity,51.5921,-1.37842,299,331.96,0,0
+michael,S11070,church,"St Michael's Church, monastic remains, and other settlement remains on Glastonbury Tor",51.144604,-2.698882,5,227.43,1,1
+michael,S11093,church,St Botolph's Chapel,52.3428,1.00621,726,515.87,0,0
+michael,S11358,church,Church of St Mary,52.1948,0.515967,607,478.57,0,0
+michael,S11491,church,Church of St George,51.4709,-1.71989,978,304.72,0,0
+michael,S11503,church,Church of St Mary,51.3098,-2.25057,936,263.72,0,0
+michael,S11735,church,Church of St Michael,51.221,-2.48187,74,244.82,0,1
+michael,S11742,church,Church of St Peter,51.1738,-2.62538,344,233.5,0,0
+michael,S11767,church,Former St Michael's Roman Catholic Church,51.1885,-2.55008,780,238.9,0,1
+michael,S11774,church,Church of St Mary,51.2757,-2.31944,75,257.68,0,0
+michael,S13414,church,Emmanuel Baptist Church With Archway At North West End,51.322029,-2.206143,639,267.09,0,0
+michael,S13417,church,Church of St Michael and All Angels,51.332055,-2.186574,962,268.82,0,1
+michael,S13937,church,Congregational Church,52.374185,1.109246,684,523.71,0,0
+michael,S13970,church,Church of St Peter and St Paul,51.639641,-1.234945,299,343.21,0,0
+michael,S14252,church,"Chapel Of St Mary, Approximately 150 Metres North West Of Thame Park House",51.729019,-0.965014,232,364.36,0,0
+michael,S14258,church,Chapel Adjoining South Side Of St Mary's School,51.586808,-1.425882,731,328.78,0,0
+michael,S15287,church,Methodist Chapel Approximately 20 Metres East Of Gwennap Pit,50.231819,-5.201752,778,23.52,0,0
+michael,S15289,church,"Church of St John the Evangelist, Camborne",50.193631,-5.293043,502,15.75,0,0
+michael,S15308,church,Deveral Chapel,50.167742,-5.372833,983,9.38,0,0
+michael,S15309,church,Church of All Saints,50.123508,-5.471577,430,0.79,1,0
+michael,S15311,church,Bible Christian Chapel With Attached Sunday School,50.364966,-4.850671,642,52.6,0,0
+michael,S15434,church,"Christ Church, Rode",51.2862,-2.27914,406,260.71,0,0
+michael,S15631,church,Strict Baptist Chapel,51.88446,-0.522403,963,399.42,0,0
+michael,S15870,church,St Patrick's Chapel,51.147147,-2.716773,861,226.48,0,0
+michael,S15871,church,Congregational Church,51.147892,-2.713561,824,226.71,0,0
+michael,S15874,church,Ebenezer Methodist Chapel,51.259827,-2.356032,390,254.59,0,0
+michael,S15876,church,"St Edmund's Church, Vobster",51.241829,-2.424684,170,249.43,0,0
+michael,S15877,church,Methodist Chapel,51.189464,-2.545129,854,239.25,0,0
+michael,S15878,church,Former Unitarian Chapel,51.194844,-2.546552,283,239.46,0,0
+michael,S15885,church,Church of the Holy Trinity,51.239386,-2.450374,800,247.73,0,0
+michael,S15895,church,Church of St Giles,51.708847,-1.008611,813,360.65,0,0
+michael,S15902,church,Church of the Holy Trinity,51.014341,-3.091025,796,196.38,0,0
+michael,S15903,church,Congregational Chapel,51.082354,-2.88059,163,212.95,0,0
+michael,S15908,church,Church of St Michael,51.069753,-2.917647,210,210.0,0,1
+michael,S16387,church,The Free Church,51.977951,-0.22448,814,422.39,0,0
+michael,S16388,church,Methodist Church,51.990504,-0.18846,927,425.23,0,0
+michael,S16389,church,Baptist Chapel,51.946893,-0.283865,395,417.18,0,0
+michael,S16415,church,Christ Church,50.612502,-4.146452,993,109.64,0,0
+michael,S16473,church,United Reformed Chapel,52.093372,0.158903,304,451.66,0,0
+michael,S17012,church,United Reformed Church,52.446589,1.353029,717,542.16,0,0
+michael,S17015,church,Baptist Chapel,51.189882,-2.548053,715,239.1,0,0
+michael,S17087,church,Seend Methodist Chapel,51.34726,-2.086703,893,275.73,0,0
+michael,S17262,church,Church of St Mary,51.786427,-0.791647,138,377.92,0,0
+michael,S17263,church,Union Chapel,51.787471,-0.763159,945,379.72,0,0
+michael,S17426,church,Church of Thomas A Becket,52.248025,0.664871,149,490.32,0,0
+michael,S17529,church,Remains of Church on Burrow Mump,51.070481,-2.916189,230,210.13,0,0
+michael,S17538,church,"The Chapel, (Offices Of Samuel Salter And Company Limited)",51.32057,-2.209545,611,266.8,0,0
+michael,S17543,church,"The Tabernacle, United Reformed Church",51.322619,-2.208771,785,266.96,0,0
+michael,S17608,church,Church of St Peter,50.380184,-4.790943,75,57.12,0,0
+michael,S17679,church,Methodist Church,51.884963,-0.52067,958,399.55,0,0
+michael,S17728,church,United Reformed Church,51.013057,-3.100374,994,195.74,0,0
+michael,S17777,church,Parish Church of St Mary,51.963403,-0.229305,475,421.36,0,0
+michael,S17956,church,Former Primitive Methodist Chapel,51.347716,-2.100718,380,274.9,0,0
+michael,S18187,church,Taunton Baptist Church,51.014135,-3.096608,968,196.03,0,0
+michael,S18228,stone_circle,United Reformed Chapel,51.427575,-1.854385,771,294.2,0,0
+michael,S18241,church,Church of St John the Baptist,51.684841,-1.127836,673,352.12,0,0
+michael,S18447,church,Bury St Edmunds Seventh-day Adventist church,52.253805,0.713925,767,493.6,0,0
+michael,S18453,church,Church of St Thomas,51.296137,-2.23449,936,263.97,0,0
+michael,S18456,church,Church of St Thomas,51.324221,-2.204065,783,267.33,0,0
+michael,S18457,church,Zion Chapel,51.322582,-2.205636,676,267.15,0,0
+michael,S18458,church,Church of St John,51.306006,-2.227195,218,264.94,0,0
+michael,S18993,church,"Methodist Chapel, Forecourt Wall, Railings And Gates",51.238188,-2.448787,629,247.76,0,0
+michael,S19239,church,Billy Bray's Three Eye Chapel,50.250888,-5.136585,201,28.6,0,0
+michael,S19247,church,Troon Methodist Church,50.197786,-5.278459,360,16.88,0,0
+michael,S19263,church,Free Methodist Church,50.124047,-5.474918,605,0.62,1,0
+michael,S19305,church,Church of St Lawrence,51.285155,-2.302213,267,259.24,0,0
+michael,S19306,church,Church of the Holy Trinity,51.123567,-2.771047,420,221.88,0,0
+michael,S19311,church,Church of St Mary,52.016226,-0.056816,641,434.58,0,0
+michael,S19322,church,Baptist Chapel,51.072869,-2.922388,674,209.88,0,0
+michael,S19376,church,Church of St Catherine,51.741273,-0.93589,38,366.77,0,0
+michael,S20077,church,"Mortuary Chapel (Church Of England), Cemetery",51.195023,-2.548687,193,239.33,0,0
+michael,S20383,church,Holy Trinity Church,51.90286,-0.437461,93,405.55,0,0
+michael,S20407,church,Church of St Luke,51.901883,-0.465723,890,403.77,0,0
+michael,S20448,church,Church of St Stephen (Methodist),50.345249,-4.890892,222,49.02,0,0
+michael,S20455,church,Former Church of All Saints,50.237421,-5.182533,605,25.02,0,0
+michael,S20728,church,Providence Chapel,51.296898,-2.233507,894,264.07,0,0
+michael,S20769,church,Chapel Of St Lawrence,50.791331,-3.667335,719,148.89,0,0
+michael,S20770,church,Congregational Chapel And The Manse,50.791327,-3.661813,913,149.23,0,0
+michael,S21047,church,Church of St Andrew,50.19912,-5.241613,872,19.21,0,0
+michael,S21225,church,Church of St George,51.343514,-2.145804,716,271.92,0,0
+michael,S21271,church,Roman Catholic Church of Our Lady and St Philip,52.189095,0.464786,393,475.15,0,0
+michael,S21375,church,Twelveheads Methodist church,50.23792,-5.14251,818,27.5,0,0
+michael,S21395,church,"Church of St Hugh of Lincoln, Letchworth",51.976306,-0.229111,796,422.03,0,0
+michael,S21396,church,"Church of St Paul, Letchworth",51.97495,-0.21617,256,422.75,0,0
+michael,S21726,church,Chapel of St Ia,50.197122,-5.282381,441,16.6,0,0
+michael,S22364,church,Parish Church of St Nicholas,51.754612,-0.924566,988,368.16,0,0
+michael,S23655,church,Conigre Unitarian Church,51.32216,-2.21079,808,266.81,0,0
+michael,S23991,church,Street Methodist Church,51.1259,-2.7388,453,223.98,0,0
+michael,S23992,church,Street Mission Church,51.12446,-2.741427,503,223.74,0,0
+michael,S23993,church,"United Reformed Church, Street",51.1256,-2.7424,359,223.74,0,0
+michael,S27331,church,All Saints,51.02038,-3.077818,926,197.52,0,0
+michael,S27865,church,Saint Paul's Church,50.523887,-4.427453,553,87.48,0,0
+michael,S27945,church,Saint Mary and Saint Berin,51.663089,-1.17718,132,347.97,0,0
+michael,S28017,church,St George,52.264447,0.704262,587,493.54,0,0
+michael,S28021,church,St Piran Mission Church,50.229147,-5.181962,205,24.58,0,0
+michael,S28022,church,"Holy Trinity Parish Church, St. Day",50.23735,-5.183926,650,24.93,0,0
+michael,S28027,church,All Saints Church Highertown,50.262445,-5.081803,706,32.62,0,0
+michael,S28034,church,Christchurch Lanner,50.213882,-5.204751,822,22.31,0,0
+michael,S29500,church,Priory Church of Saint Peter,51.886067,-0.517556,968,399.79,0,0
+michael,S29501,church,St Augustine's,51.878617,-0.504181,191,400.23,0,0
+michael,S29592,church,St Cross,51.817511,-0.689543,333,385.77,0,0
+michael,S29593,church,St Faith's Church,51.956873,-0.256759,259,419.35,0,0
+michael,S29594,church,St Mark's,51.956232,-0.284913,562,417.59,0,0
+michael,S29595,church,St Michael,51.975157,-0.231676,763,421.81,0,1
+michael,S30685,church,"St Andrew's Church, Edgarley",51.1399,-2.6894,775,227.76,1,0
+michael,S30886,church,Wantage Methodist Church,51.587352,-1.426276,797,328.79,0,0
+michael,S31017,church,Church of Our Lady St Mary of Glastonbury,51.145,-2.7178,688,226.3,0,0
+michael,S31039,church,Holy Trinity Church,51.592793,-1.409574,786,330.09,0,0
+michael,S32227,church,Holy Trinity,50.773357,-3.728144,316,144.18,0,0
+michael,S32911,church,Christ Church,51.908788,-0.411944,127,407.41,0,0
+michael,S33210,church,"All Souls Chapel, East Lockinge",51.58469,-1.38999,649,330.87,0,0
+michael,S33591,church,All Hallows Convent Chapel,52.478364,1.43726,33,548.85,0,0
+michael,S33894,church,St Henry Morse,52.384292,1.106362,413,524.03,0,0
+michael,S34060,church,Liberal Catholic Church of St Alban,51.97662,-0.22419,673,422.34,0,0
+michael,S34153,church,The Chapel Guest House,50.368162,-4.806379,664,55.49,0,0
+michael,S34864,church,"St John Vianney, Wantage",51.588903,-1.417596,666,329.4,0,0
+michael,S34999,church,Freedom Church,52.274987,0.767508,282,497.93,0,0
+michael,S35002,church,Ixworth Methodist Church,52.298314,0.832786,66,503.07,0,0
+michael,S35320,stone_circle,Stone circle and cairn,50.689986,-3.937112,975,126.77,0,0
+michael,S35356,stone_circle,Avebury Down,51.440303,-1.836958,104,295.94,0,0
+michael,S35357,stone_circle,Avebury Stone Circle,51.429607,-1.856899,489,294.16,0,0
+michael,S35761,stone_circle,The Hurlers: Central Circle,50.516464,-4.458272,949,85.18,0,0
+michael,S35919,megalith,Carwynnen Quoit,50.188246,-5.293365,0,15.42,0,0
+michael,S35993,megalith,,51.548514,-1.535138,550,320.1,0,0
+michael,S36106,megalith,,50.51592,-4.459793,952,85.05,0,0
+michael,S36177,megalith,Living Rock,51.143017,-2.702598,23,227.12,1,0
+michael,S36228,megalith,,51.429489,-1.853734,606,294.34,0,0
+michael,S36229,megalith,,51.428486,-1.851427,780,294.43,0,0
+michael,S36230,megalith,,51.429664,-1.852049,644,294.46,0,0
+michael,S36231,megalith,,51.429077,-1.853286,661,294.35,0,0
+michael,S36232,megalith,,51.429087,-1.854088,633,294.3,0,0
+michael,S36238,megalith,,51.42922,-1.851636,701,294.46,0,0
+michael,S36241,megalith,,51.429504,-1.855802,536,294.22,0,0
+michael,S36268,megalith,Cosdon Hill Multiple Stone Rows,50.708036,-3.922357,240,128.67,0,0
+michael,S36347,megalith,King Doniert’s Stone,50.492795,-4.488166,244,82.01,0,0
+michael,S36424,megalith,The Polisher,51.442401,-1.81672,568,297.29,0,0
+michael,S36448,megalith,Adam,51.422793,-1.873328,611,292.79,0,0
+michael,S36474,barrow,Horslip Long Barrow,51.433513,-1.877227,566,293.12,0,0
+michael,S36565,barrow,,50.440679,-4.623973,338,70.76,0,0
+michael,S36566,barrow,,50.440509,-4.620309,487,70.98,0,0
+michael,S36685,barrow,,50.440259,-4.65078,591,69.1,0,0
+michael,S36687,barrow,,50.439987,-4.651424,589,69.04,0,0
+michael,S36689,barrow,,50.439031,-4.653226,562,68.88,0,0
+michael,S36690,barrow,,50.439942,-4.61601,696,71.21,0,0
+michael,S36691,barrow,,50.439778,-4.614087,782,71.31,0,0
+michael,S36696,barrow,,50.441407,-4.648978,636,69.27,0,0
+michael,S36697,barrow,,50.446157,-4.64302,875,69.91,0,0
+michael,S36698,barrow,,50.439361,-4.615015,788,71.23,0,0
+michael,S37289,barrow,,50.505801,-4.441486,677,85.6,0,0
+michael,S37290,barrow,,50.507049,-4.439898,614,85.77,0,0
+michael,S37294,barrow,,51.544032,-1.528186,117,320.29,0,0
+michael,S37295,barrow,,51.543942,-1.526328,187,320.39,0,0
+michael,S37296,barrow,"Round barrow cemetery at Seven Barrows, Lambourn",51.544177,-1.527279,133,320.35,0,0
+michael,S37297,barrow,,51.543609,-1.529953,101,320.16,0,0
+michael,S37334,barrow,"Round barrow known as Goodern Barrow, 550m east of St Michael's Church",50.247099,-5.118531,823,29.49,0,0
+michael,S37336,barrow,Bowl barrow 230m east of Trewirgie Farm,50.210629,-5.224105,419,20.94,0,0
+michael,S37337,barrow,,50.201969,-5.233948,882,19.84,0,0
+michael,S37396,barrow,,51.433374,-1.83854,729,295.48,0,0
+michael,S37399,barrow,,51.435193,-1.833433,720,295.89,0,0
+michael,S37400,barrow,,51.437238,-1.842278,227,295.45,0,0
+michael,S37401,barrow,,51.437832,-1.838651,289,295.71,0,0
+michael,S37402,barrow,,51.438942,-1.824457,650,296.63,0,0
+michael,S37403,barrow,,51.438193,-1.819951,873,296.87,0,0
+michael,S37404,barrow,"Bowl barrow immediately west of the Ridgeway, 400m north east of its junction with Green Street",51.440368,-1.819976,659,296.98,0,0
+michael,S37405,barrow,,51.442473,-1.823685,331,296.87,0,0
+michael,S37406,barrow,,51.443035,-1.822526,314,296.97,0,0
+michael,S37468,barrow,,51.40934,-1.933448,68,288.4,0,0
+michael,S37469,barrow,,51.408763,-1.934105,34,288.33,0,0
+michael,S37470,barrow,,51.408525,-1.939145,178,288.01,0,0
+michael,S37471,barrow,"Eleven round barrows 1000m north of Baltic Farm forming part of a barrow cemetery, and a probable enclosed Iron Age farmstead on",51.407975,-1.940172,158,287.92,0,0
+michael,S37472,barrow,,51.407622,-1.941333,162,287.83,0,0
+michael,S37473,barrow,,51.407288,-1.942096,155,287.77,0,0
+michael,S37476,barrow,,51.402145,-1.964491,397,286.12,0,0
+michael,S37477,barrow,,51.403202,-1.963397,464,286.25,0,0
+michael,S37478,barrow,,51.403698,-1.95462,220,286.81,0,0
+michael,S37479,barrow,,51.404273,-1.951874,185,287.01,0,0
+michael,S37480,barrow,,51.399842,-1.952539,226,286.73,0,0
+michael,S37481,barrow,,51.399454,-1.949535,363,286.89,0,0
+michael,S37482,barrow,,51.399347,-1.947775,432,287.0,0,0
+michael,S37483,barrow,,51.399708,-1.946788,430,287.08,0,0
+michael,S37485,barrow,,51.407124,-1.945372,248,287.56,0,0
+michael,S37486,barrow,,51.405518,-1.92973,429,288.43,0,0
+michael,S37487,barrow,,51.40529,-1.927026,541,288.58,0,0
+michael,S37488,barrow,,51.405759,-1.92473,571,288.75,0,0
+michael,S37489,barrow,,51.408315,-1.923228,371,288.97,0,0
+michael,S37490,barrow,,51.406214,-1.918271,741,289.16,0,0
+michael,S37491,barrow,,51.410644,-1.917692,327,289.43,0,0
+michael,S37492,barrow,,51.406585,-1.916964,748,289.26,0,0
+michael,S37493,barrow,,51.411067,-1.904879,711,290.24,0,0
+michael,S37494,barrow,,51.414566,-1.916082,3,289.74,0,0
+michael,S37495,barrow,,51.414579,-1.899603,543,290.75,0,0
+michael,S37496,barrow,,51.421178,-1.876155,675,292.53,0,0
+michael,S37497,barrow,,51.422447,-1.88145,376,292.28,0,0
+michael,S37498,barrow,,51.421618,-1.88499,339,292.02,0,0
+michael,S37499,barrow,,51.420224,-1.90792,285,290.54,0,0
+michael,S37500,barrow,,51.421896,-1.897017,87,291.3,0,0
+michael,S37501,barrow,,51.422715,-1.903202,372,290.96,0,0
+michael,S37502,barrow,,51.421302,-1.874612,714,292.63,0,0
+michael,S37504,barrow,,51.425495,-1.904648,692,291.02,0,0
+michael,S37505,barrow,,51.423528,-1.911628,731,290.49,0,0
+michael,S37514,barrow,,51.417781,-1.924922,610,289.37,0,0
+michael,S37515,barrow,,51.417778,-1.92253,531,289.52,0,0
+michael,S37516,barrow,,51.40747,-1.917271,651,289.29,0,0
+michael,S37668,barrow,Four bowl barrows 400m south-east of Sevenbarrows House: part of the Seven Barrows cemetery,51.542144,-1.528055,307,320.19,0,0
+michael,S37669,barrow,,51.547352,-1.532562,352,320.19,0,0
+michael,S37792,barrow,,51.504253,-1.653153,89,310.55,0,0
+michael,S37869,barrow,Grange Stables bell barrow,51.421924,-1.879174,502,292.39,0,0
+michael,S37899,barrow,Ickleford Tumulus,51.971814,-0.247406,926,420.68,0,0
+michael,S38358,barrow,,51.467481,-1.731033,945,303.85,0,0
+michael,S38590,barrow,Three bowl barrows 590m south west of Bedwindle forming part of a round barrow cemetery,50.4343,-4.63864,418,69.5,0,0
+michael,S38591,barrow,Two bowl barrows 535m ENE of Fairy Cross forming part of a round barrow cemetery,50.4306,-4.63238,999,69.68,0,0
+michael,S38611,barrow,Round barrow in Beacon Plantation,51.2109,-2.51542,225,242.22,0,0
+michael,S38615,barrow,Two round barrows on Beacon Hill,51.2134,-2.52469,782,241.79,0,0
+michael,S38644,barrow,Three bowl barrows 245m north west of Gregwartha Cottage,50.2015,-5.23357,941,19.84,0,0
+michael,S38684,barrow,Round barrow 750yds (690m) SE of Smeathe's Plantation,51.4691,-1.7391,521,303.45,0,0
+michael,S38701,barrow,Ogbourne Maizey Down round barrow,51.461,-1.76676,400,301.33,0,0
+michael,S38744,barrow,"Barrow 350yds (320m) E of Smeathe's Plantation, Ogbourne Down",51.4716,-1.74336,135,303.32,0,0
+michael,S38774,barrow,Oliver's Camp and two round barrows outside Oliver's Camp,51.381113,-1.999975,478,282.84,0,0
+michael,S38904,barrow,"Bowl barrow on Ivinghoe Hills, 480m south of Ivinghoe Beacon trig pillar:  part of the Beacon Hill round barrow cemetery",51.8379,-0.608456,902,391.77,0,0
+michael,S38906,barrow,"Bowl barrow on Ivinghoe Hills, 240m south of Ivinghoe Beacon trig pillar: part of the Beacon Hill round barrow cemetery",51.8401,-0.607816,705,391.92,0,0
+michael,S38911,barrow,"Bowl barrow on Ivinghoe Beacon Hill, 230m east of Ivinghoe Beacon trig pillar:  part of the Beacon Hill round barrow cemetery",51.8422,-0.604933,590,392.21,0,0
+michael,S38914,barrow,Bowl barrow on Gallows Hill 180m south-east of Beacon Lodge,51.844,-0.594307,750,392.95,0,0
+michael,S39055,barrow,Two bowl barrows in Shipley Bottom,51.5054,-1.67155,806,309.49,0,0
+michael,S39307,barrow,"Green Bank bowl barrow, 230m east of the Avebury henge monument",51.4293,-1.84746,832,294.72,0,0
+michael,S39327,barrow,"Bowl barrow 900m south west of the junction of the Ridgeway and Green Street, forming part of a round barrow cemetery on Avebury",51.4336,-1.83412,853,295.76,0,0
+michael,S39331,barrow,"Bowl barrow 770m south west of the junction of the Ridgeway and Green Street, forming part of a round barrow cemetery on Avebury",51.4335,-1.83174,942,295.9,0,0
+michael,S39376,barrow,Bowl barrow on Hinton Downs,51.5186,-1.63634,941,312.34,0,0
+michael,S39418,barrow,Round barrow on Beacon Hill,51.2131,-2.52302,697,241.88,0,0
+michael,S39429,barrow,Group of round barrows on Rough Hill,51.4553,-1.80526,315,298.67,0,0
+michael,S39513,barrow,"Four bowl barrows north of Greymare Farm, forming part of a round barrow cemetery",50.4458,-4.63846,676,70.17,0,0
+michael,S39518,barrow,Bowl barrow 430m south west of Fairy Cross Farm forming part of a round barrow cemetery,50.4265,-4.64526,926,68.66,0,0
+michael,S39563,barrow,"Five Knolls round  barrow  cemetery:  three  bell  barrows,  two  bowl barrows and two pond barrows on Dunstable Down",51.8787,-0.539385,933,398.08,0,0
+michael,S39565,barrow,Beckhampton round barrow cemetery 150m north east of the `Waggon and Horses',51.4207,-1.86877,967,292.96,0,0
+michael,S39592,barrow,Round barrow forming part of the Fox Covert round barrow cemetery on West Down,51.4164,-1.8929,587,291.26,0,0
+michael,S39600,barrow,"Ten barrows forming part of Fox Covert round barrow cemetery, West Down.",51.4172,-1.89366,484,291.25,0,0
+michael,S39805,barrow,Bowl barrow 300m south of Fox Covert forming part of the Fox Covert round barrow cemetery on West Down,51.4152,-1.89027,792,291.35,0,0
+michael,S39926,barrow,Round cairn on the summit of Little Hound Tor,50.693,-3.93695,691,126.94,0,0
+michael,S39929,barrow,Round cairn 80m south west of Little Hound Tor summit,50.6923,-3.93759,735,126.87,0,0
+michael,S39934,barrow,Saucer barrow 250m east of Windmill Hill: part of the Windmill Hill round barrow cemetery,51.4403,-1.86987,986,293.93,0,0
+michael,S39945,barrow,Bowl barrow 750m south-west of Manor Farm: part of the Windmill Hill round barrow cemetery,51.4399,-1.86783,879,294.03,0,0
+michael,S39950,barrow,Bowl barrow 750m south-east of Windmill Hill,51.4365,-1.8651,456,294.02,0,0
+michael,S39952,barrow,Bowl barrow 700m south-east of Windmill Hill,51.4372,-1.86513,526,294.06,0,0
+michael,S40247,barrow,"Bowl barrow 350m south-west of Harley Bushes, Bishopstone Downs",51.5283,-1.60837,972,314.56,0,0
+michael,S40340,barrow,Round cairn 190m east of Doe Tor summit,50.6451,-4.061,900,116.69,0,0
+michael,S40394,barrow,Round cairn 310m SSW of Great Links Tor,50.66,-4.05405,286,117.94,0,0
+michael,S40482,barrow,Bowl barrow 70m north of Rockley Plantation,51.4558,-1.76655,916,301.07,0,0
+michael,S40490,barrow,Bowl barrow situated 60m west of Beckhampton Buildings forming part of a round barrow cemetery on North Down,51.4108,-1.8973,989,290.69,0,0
+michael,S40493,barrow,Pair of Bronze Age bowl barrows 200m WSW of Beckhampton Buildings forming part of a barrow cemetery situated on North Down,51.4104,-1.89918,965,290.55,0,0
+michael,S40521,barrow,"Round barrow 1260m NNE of Baltic Farm, 75m south of Roman Road, forming part of a barrow cemetery situated on North Down",51.4102,-1.93289,134,288.48,0,0
+michael,S40523,barrow,Pair of bell barrows and a pair of bowl barrows forming part of a barrow cemetery at Baltic Farm,51.3983,-1.93664,904,287.62,0,0
+michael,S40526,barrow,Bell barrow forming part of a round barrow cemetery 135m ENE of Baltic Farm,51.399,-1.9354,877,287.73,0,0
+michael,S40627,barrow,Bell barrow 200m north of Rockley Plantation,51.4573,-1.76765,733,301.08,0,0
+michael,S40630,barrow,Bowl barrow and a saucer barrow 200m north of Rockley Plantation,51.4562,-1.76586,899,301.13,0,0
+michael,S40638,barrow,Bowl barrow 400m north-west of Aldbourne Warren Farm,51.4999,-1.66305,12,309.72,0,0
+michael,S40959,barrow,Round cairn 570m west of Stoneyhurst,50.7067,-3.91281,226,129.18,0,0
+michael,S41054,barrow,Bowl barrow 850m north west of North Farm,51.5123,-1.64642,655,311.39,0,0
+michael,S41190,barrow,Disc barrow 780m north east of North Farm,51.5113,-1.62893,18,312.41,0,0
+michael,S41226,barrow,Two bowl barrows 500m south of Fearnhill School,51.9718,-0.246633,900,420.73,0,0
+michael,S41289,barrow,"Springfield style enclosure, three bowl barrows and two pond barrows on Whiteley Hill",52.0334,0.004541,852,439.2,0,0
+michael,S41375,barrow,Round barrow 530m north west of Carnwinnick,50.3284,-4.9206,305,46.24,0,0
+michael,S41401,barrow,Bowl barrow on King's Play Hill 510m north of Hill Cottage,51.3939,-1.9872,346,284.3,0,0
+michael,S41412,barrow,Disc barrow 700m north-east of Sevenbarrows House: part of the Seven Barrows cemetery,51.5495,-1.52772,403,320.6,0,0
+michael,S41449,barrow,Bowl barrow 150m east of the wireless station on Morgan's Hill,51.403,-1.95469,154,286.77,0,0
+michael,S41475,barrow,Bowl barrow forming part of a round barrow cemetery situated 120m NNW of Down Barn on North Down,51.4072,-1.90943,938,289.76,0,0
+michael,S41478,barrow,"Long barrow and abutting bowl barrow 700m WSW of Beckhampton Buildings, forming the focus of a barrow cemetery on North Down",51.4086,-1.90574,924,290.06,0,0
+michael,S41491,barrow,Round cairn 740m SSW of Caradon Hill summit,50.5056,-4.4434,627,85.47,0,0
+michael,S41507,barrow,"A double bell barrow, a saucer barrow and four bowl barrows, 450m south-east of Sevenbarrows House: part of the Seven Barrows ce",51.5406,-1.52879,434,320.07,0,0
+michael,S41527,barrow,Bowl barrow 870m ESE of New Barn on Monkton Down,51.441,-1.82177,538,296.91,0,0
+michael,S41615,barrow,Round cairn and shelters 812m SSW of Caradon Hill summit,50.5047,-4.44309,725,85.44,0,0
+michael,S41628,barrow,Bowl barrow 270m north-east of Sevenbarrows House: part of the Seven Barrows cemetery,51.5458,-1.53067,137,320.23,0,0
+michael,S41652,barrow,Bowl barrow 250m north of Sevenbarrows House: Part of the Seven Barrows cemetery,51.5463,-1.53308,265,320.11,0,0
+michael,S41668,barrow,Bell barrow 400m north-east of Postdown Farm: part of the Seven Barrows cemetery,51.5414,-1.52527,471,320.33,0,0
+michael,S41671,barrow,Two bowl barrows 300m north-east of Sevenbarrows House: part of the Seven Barrows cemetery,51.5466,-1.53024,202,320.3,0,0
+michael,S41674,barrow,Bowl barrow 300m north of Postdown Farm: part of the Seven Barrows cemetery,51.541,-1.52658,467,320.22,0,0
+michael,S41676,barrow,Bowl barrow 150m north of Half Moon Wood,51.5107,-1.65678,839,310.67,0,0
+michael,S41775,barrow,Round cairn 230m SW of Caradon Hill summit,50.5097,-4.43958,372,85.94,0,0
+michael,S41776,barrow,Bowl barrow 630m north east of Wick Bottom Barn,51.4624,-1.78526,348,300.27,0,0
+michael,S41783,barrow,Round cairn with peripheral berm 402m SSW of Caradon Hill summit,50.5077,-4.43953,565,85.83,0,0
+michael,S41790,barrow,Round cairn 472m SSW of Caradon Hill summit,50.5068,-4.43817,700,85.86,0,0
+michael,S41806,barrow,Bowl barrow 375m east of Wick Bottom Barn,51.4569,-1.7841,228,300.05,0,0
+michael,S41825,barrow,Round cairn 527m SSW of Caradon Hill summit,50.5069,-4.441365,576,85.67,0,0
+michael,S41841,barrow,Bowl barrow 800m north-east of Hackpen Barn,51.452,-1.8331,913,296.8,0,0
+michael,S41889,barrow,"Bowl barrow on King's Play Hill, 420m north of Hill Cottage",51.393,-1.98757,271,284.23,0,0
+michael,S41977,barrow,"Two bowl barrows on Barren Down, 250m north west of Princes Lodge",51.1953,-2.54382,331,239.65,0,0
+michael,S42147,barrow,Round cairn 15m SSE of Caradon Hill summit,50.5109,-4.43704,348,86.16,0,0
+michael,S42166,barrow,Round cairn 812m ESE of Trewalla Farm,50.5115,-4.46312,648,84.6,0,0
+michael,S42170,barrow,Round cairn 725m ESE of Trewalla Farm,50.5104,-4.46489,606,84.43,0,0
+michael,S42179,barrow,Round cairn 840m SE of Trewalla Farm,50.5096,-4.46413,502,84.43,0,0
+michael,S42186,barrow,Round cairn 612m SE of Trewalla Farm,50.5094,-4.46799,621,84.18,0,0
+michael,S42207,barrow,Bowl barrow 550m north-east of Baltic Farm,51.4005,-1.92872,952,288.22,0,0
+michael,S42293,barrow,Bowl barrow 1450m south of Barbury Castle Farm,51.4673,-1.7738,449,301.23,0,0
+michael,S42307,barrow,Six bowl barrows 560m north of New Barn: part of a barrow cemetery on Monkton Down,51.4496,-1.83366,696,296.64,0,0
+michael,S42362,barrow,Bowl barrow on Sugar Hill,51.5022,-1.64904,248,310.7,0,0
+michael,S42378,barrow,Round cairn 525m east of Trewalla Farm,50.513,-4.46748,948,84.42,0,0
+michael,S42513,barrow,Three round barrows forming the core of a dispersed barrow cemetery on Idstone Down,51.5274,-1.605,773,314.72,0,0
+michael,S42593,barrow,Hackpen Hill bowl barrow 525m south of Sincombe Farm,51.5644,-1.49498,792,323.39,0,0
+michael,S42596,barrow,"Sparsholt Down round barrow, 900m north of Seven Barrows round barrow cemetery",51.5522,-1.52766,666,320.75,0,0
+michael,S44028,barrow,Cairnfield on the western slope of White Hill,50.6358,-4.08455,957,114.73,0,0
+michael,S44029,barrow,Cairn forming part of the cairnfield on the western slope of White Hill,50.6353,-4.08505,987,114.67,0,0
+michael,S44107,barrow,Cairnfield 370m west of Blackaton Brook Ford,50.6993,-3.92189,617,128.22,0,0
+michael,S44108,barrow,Cairn cemetery and earthwork bank 340m south west of Blackaton Brook Ford,50.6971,-3.92015,890,128.2,0,0
+michael,S44166,barrow,Cairnfield 790m north west of Stoneyhurst,50.7103,-3.91492,195,129.26,0,0
+michael,S44167,barrow,Cairnfield 760m west of Stoneyhurst,50.7065,-3.91562,146,129.0,0,0
+michael,S47596,hillfort,"Largin Castle, Cornwall",50.451829,-4.580444,843,74.05,0,0
+michael,S47603,hillfort,"St Stephens Beacon, Cornwall",50.355079,-4.869666,388,50.88,0,0
+michael,S48703,hillfort,"Baldock, Hertfordshire",51.989829,-0.182129,662,425.58,0,0
+michael,S49547,hillfort,"Ivinghoe Beacon, Buckinghamshire (Beacon Hill)",51.841861,-0.607439,544,392.04,0,0
+michael,S49578,hillfort,"Cadbury Castle, Cadbury, Devon",50.836792,-3.544497,635,158.92,0,0
+michael,S49646,hillfort,"Berry Ball, Crediton Hamlets, Devon (Lethen Castle; Leden Castle; Leathern Castle)",50.763618,-3.756961,241,141.88,0,0
+michael,S49745,hillfort,"Longridge Woods, Lydford, Devon",50.635257,-4.126694,490,112.12,0,0
+michael,S49747,hillfort,"Castle Park Camp, Milton Abbot, Devon",50.596599,-4.2287,413,103.72,0,0
+piper,S01903,church,Urishay Castle Chapel,52.0328,-2.9883,139,19.38,0,0
+piper,S03756,church,Church of St Clodock,51.942,-2.98121,5,9.27,0,0
+piper,S04109,church,"St. Michael and All Angels, Llanvihangel Crucorney",51.879745,-2.981931,485,2.36,0,1
+piper,S08101,church,Church of St Faith,52.0703,-3.00135,493,23.6,0,0
+piper,S16680,church,Church of St Peter,51.955802,-2.988569,414,10.83,0,0
+piper,S21472,church,Church of St John the Baptist,51.91559,-2.983265,329,6.35,0,0
+piper,S23812,church,Calvinistic Methodist Chapel,51.892568,-2.969786,438,3.73,0,0
+piper,S30354,church,Zoar Baptist Chapel,51.893544,-2.969226,483,3.84,0,0
+piper,S48740,hillfort,"Ysgyryd (Skirrid) Fawr, Monmouth",51.858949,-2.972728,3,0.01,0,0
